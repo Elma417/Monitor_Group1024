@@ -1,0 +1,293 @@
+{
+  "keys": "/home/elma/Code/Monitor_Group1024/config/config.default.js",
+  "middleware": "/home/elma/Code/Monitor_Group1024/config/config.default.js",
+  "session": {
+    "maxAge": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-session@3.3.0@egg-session/config/config.default.js",
+    "key": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-session@3.3.0@egg-session/config/config.default.js",
+    "httpOnly": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-session@3.3.0@egg-session/config/config.default.js",
+    "encrypt": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-session@3.3.0@egg-session/config/config.default.js",
+    "logValue": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-session@3.3.0@egg-session/config/config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+    "protocolWhiteList": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+    "defaultMiddleware": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "type": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "ignoreJSON": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "useSession": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "cookieName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "sessionName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "headerName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "bodyName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "queryName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "supportedRequests": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "refererWhiteList": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "value": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "maxAge": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "includeSubdomains": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "value": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "value": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "policy": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "ipExceptionList": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js",
+      "checkAddress": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-security@2.11.0@egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "callback": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js",
+    "csrf": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-jsonp@2.0.0@egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "appErrorFilter": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js",
+    "templatePath": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-onerror@2.1.0@egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "dirs": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "queryField": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieField": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieDomain": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-i18n@2.1.1@egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-watcher@3.1.1@egg-watcher/config/config.default.js",
+    "eventSources": {
+      "default": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-watcher@3.1.1@egg-watcher/config/config.default.js",
+      "development": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-watcher@3.1.1@egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-schedule@3.6.6@egg-schedule/config/config.default.js",
+      "file": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-schedule@3.6.6@egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-schedule@3.6.6@egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "autoFields": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "defaultCharset": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "fieldNameSize": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "fieldSize": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "fields": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "fileSize": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "files": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "fileExtensions": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "whitelist": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "allowArrayField": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "tmpdir": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js",
+      "disable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-multipart@2.13.1@egg-multipart/config/config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFileSize": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxFiles": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "rotateDuration": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js",
+    "maxDays": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-logrotator@3.1.0@egg-logrotator/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dir": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "dynamic": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "preload": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "buffer": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-static@2.2.0@egg-static/config/config.prod.js",
+    "maxFiles": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-static@2.2.0@egg-static/config/config.default.js",
+    "maxAge": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-static@2.2.0@egg-static/config/config.prod.js"
+  },
+  "view": {
+    "root": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-view@2.1.3@egg-view/config/config.default.js",
+    "cache": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-view@2.1.3@egg-view/config/config.default.js",
+    "defaultExtension": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-view@2.1.3@egg-view/config/config.default.js",
+    "defaultViewEngine": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-view@2.1.3@egg-view/config/config.default.js",
+    "mapping": "/home/elma/Code/Monitor_Group1024/node_modules/_egg-view@2.1.3@egg-view/config/config.default.js"
+  },
+  "env": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "name": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "cookies": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "proxy": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "maxIpsCount": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "maxProxyCount": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "protocolHeaders": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "ipHeaders": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "hostHeaders": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "pkg": {
+    "name": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "version": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "description": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "private": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "egg": {
+      "declarations": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "dependencies": {
+      "egg": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "egg-scripts": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "autod": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "autod-egg": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "egg-bin": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "egg-ci": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "egg-mock": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "eslint": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "eslint-config-egg": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "scripts": {
+      "start": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "stop": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "dev": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "debug": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "test": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "test-local": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "cov": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "lint": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "ci": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "autod": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "type": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "url": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "author": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "license": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "baseDir": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "HOME": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "rundir": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "dump": {
+    "ignore": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "notFound": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "sitefile": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "middlewares": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "httpClient": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "cacheControl": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "encoding": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "formLimit": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "jsonLimit": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "textLimit": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "strict": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "depth": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "parameterLimit": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "onerror": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "encoding": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "env": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "level": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "consoleLevel": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "disableConsoleAfterReady": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "outputJSON": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "buffer": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "appLogName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "coreLogName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "agentLogName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "errorLogName": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "coreLogger": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "allowDebugAtProd": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "enablePerformanceTimer": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "dnsCacheMaxLength": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "request": {
+      "timeout": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "freeSocketTimeout": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "maxSockets": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "maxFreeSockets": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "freeSocketTimeout": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "maxSockets": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "maxFreeSockets": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "logging": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "coreMiddleware": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "workerStartTimeout": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "serverTimeout": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "port": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+      "hostname": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js",
+    "responseTimeout": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+  },
+  "onClientError": "/home/elma/Code/Monitor_Group1024/node_modules/_egg@2.36.0@egg/config/config.default.js"
+}
