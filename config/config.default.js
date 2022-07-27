@@ -37,6 +37,7 @@ module.exports = appInfo => {
 		csrf: {
 			enable: false,
 		},
+		domainWhiteList: ['*'], // 跨域配置
 	}
 
 	config.bodyParser = {
