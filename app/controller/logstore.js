@@ -18,29 +18,31 @@ class LogStoreController extends Controller {
 
 		data = typeof data === 'string' ? JSON.parse(data) : data
 
-		let ip = ctx.request.ip
-		console.log(ctx.request.ip)
-		// var ip = '112.10.130.86'
-		let ua = parser(ctx.request.header['user-agent'])
+		let log = {}
 
-		let log = {
-			ip,
-			host: ctx.request.header['host'],
-			os: ua.os.name ? ua.os.name.toLowerCase() : '',
-			browser: ua.browser.name ? ua.browser.name.toLowerCase() : '',
-
-			timeStamp: moment().format('YYYY-MM-DD hh:mm:ss'),
-
-			uuid: data.uuid,
-			category: data.category,
-			type: data.type,
-		}
-
+		let ip = ctx.request.ip // '112.10.130.86'
 		// 根据ip解析地理位置
 		let geo = geoip.lookup(ip)
 		if (geo) {
 			log.country = countries[geo.country]
 			log.city = cities[geo.city]
+		}
+		// 解析user-agent
+		let ua = parser(ctx.request.header['user-agent'])
+
+		log = {
+			...log,
+
+			ip,
+			host: ctx.request.header['host'],
+			os: ua.os.name ? ua.os.name.toLowerCase() : '',
+			browser: ua.browser.name ? ua.browser.name.toLowerCase() : '',
+			timeStamp: moment().format('YYYY-MM-DD hh:mm:ss'),
+
+			// 日志公共信息
+			uuid: data.uuid,
+			category: data.category,
+			type: data.type,
 		}
 
 		// 把已经设置过的信息过滤掉
@@ -54,11 +56,12 @@ class LogStoreController extends Controller {
 
 		// 保存日志
 		try {
-			// await service.log.createOneLog(log)
+			await service.log.createOneLog(log)
 		} catch (err) {
 			console.error(err)
 		}
 
+		// 日志生成成功
 		ctx.response.status = 200
 	}
 }
