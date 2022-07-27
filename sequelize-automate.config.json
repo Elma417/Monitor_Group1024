@@ -1,0 +1,16 @@
+{
+  "dbOptions": {
+    "database": "monitor",
+    "username": "root",
+    "password": "c92a4477911d3831",
+    "dialect": "mysql",
+    "host": "182.61.146.211",
+    "port": 3306,
+    "logging": false
+  },
+  "options": {
+    "type": "egg",
+    "dir": "./app/model",
+    "timestamps": false
+  }
+}

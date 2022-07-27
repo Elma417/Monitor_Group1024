@@ -7,15 +7,21 @@
     "declarations": true
   },
   "dependencies": {
+    "co-body": "^6.1.0",
     "egg": "^2",
-    "egg-scripts": "^2"
+    "egg-sequelize": "^6.0.0",
+    "geoip-lite": "^1.4.5",
+    "moment": "^2.29.4",
+    "mysql2": "^2.3.3",
+    "ua-parser-js": "^1.0.2"
   },
   "devDependencies": {
     "autod": "^3",
     "autod-egg": "^1",
-    "egg-bin": "^4",
+    "egg-bin": "^4.20.0",
     "egg-ci": "^2",
     "egg-mock": "^4",
+    "egg-scripts": "^2.17.0",
     "eslint": "^8",
     "eslint-config-egg": "^12"
   },
