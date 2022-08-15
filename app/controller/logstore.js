@@ -9,6 +9,7 @@ const countries = require('../../assert/countries')
 const Controller = require('egg').Controller
 
 class LogStoreController extends Controller {
+	// 日志上报接口
 	async track() {
 		const { ctx, service } = this
 		let data = ctx.query.log || ctx.request.body

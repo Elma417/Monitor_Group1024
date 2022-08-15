@@ -14,7 +14,9 @@
       "genid": "<Function v4>"
     },
     "security": {
-      "domainWhiteList": [],
+      "domainWhiteList": [
+        "*"
+      ],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
       "csrf": {
@@ -119,6 +121,7 @@
         "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static\\config\\locales",
         "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view\\config\\locales",
         "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-sequelize\\config\\locales",
+        "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-cors\\config\\locales",
         "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\locales",
         "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\locales"
       ],
@@ -203,6 +206,9 @@
       "password": "<String len: 16>",
       "timezone": "+08:00"
     },
+    "cors": {
+      "origin": "<Function corsOrigin>"
+    },
     "env": "local",
     "name": "Monitor_Group1024",
     "keys": "<String len: 36>",
@@ -224,6 +230,7 @@
       "dependencies": {
         "co-body": "^6.1.0",
         "egg": "^2",
+        "egg-cors": "^2.2.3",
         "egg-sequelize": "^6.0.0",
         "geoip-lite": "^1.4.5",
         "moment": "^2.29.4",
@@ -356,6 +363,7 @@
       "logging": false
     },
     "coreMiddleware": [
+      "cors",
       "meta",
       "siteFile",
       "notfound",
@@ -555,6 +563,17 @@
       "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\plugin.js",
       "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-sequelize",
       "version": "6.0.0"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-cors",
+      "version": "2.2.3"
     }
   },
   "appInfo": {
@@ -573,6 +592,7 @@
       "dependencies": {
         "co-body": "^6.1.0",
         "egg": "^2",
+        "egg-cors": "^2.2.3",
         "egg-sequelize": "^6.0.0",
         "geoip-lite": "^1.4.5",
         "moment": "^2.29.4",

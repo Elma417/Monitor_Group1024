@@ -10,7 +10,6 @@
   },
   "options": {
     "type": "egg",
-    "dir": "./app/model",
-    "timestamps": false
+    "dir": "./app/model"
   }
 }
