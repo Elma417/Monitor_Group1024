@@ -1,13 +1,57 @@
 'use strict'
 const Controller = require('egg').Controller
 
-class MonitorApiController extends Controller {
-	// JS异常：
-	async jsExcData() {
-		// 时间、JS异常数量、页面访问量、（如果可以拿到独立访问量也可以传回来，加上即可）
+const queryRule = {
+	startTime: 'dateTime',
+	endTime: 'dateTime',
+	dim: { type: 'enum', values: ['min', 'hour', 'day'] },
+}
 
-		const { ctx } = this
-		ctx.body = 'hi, jsExcData'
+class MonitorApiController extends Controller {
+	/*
+	 * 统一成功回调
+	 */
+	success(code, message, body) {
+		this.ctx.status = code || 200
+		this.ctx.body = {
+			success: true,
+			message: message || '成功',
+			body: body,
+		}
+	}
+
+	/*
+	 * 统一错误处理
+	 */
+	error(code, message) {
+		this.ctx.status = code || 500
+		this.ctx.body = {
+			success: false,
+			message: message || 'service error',
+		}
+	}
+
+	/*
+	 * JS异常：
+	 */
+	async jsExcData() {
+		const { ctx, service } = this
+
+		try {
+			ctx.validate(queryRule, ctx.query)
+		} catch (e) {
+			return this.error(422, `${e.code}: ${e.errors[0].field} ${e.errors[0].message}`)
+		}
+
+		let list = []
+		try {
+			const { startTime, endTime, dim } = ctx.query
+			list = await service.monitor.getJSExcLog(startTime, endTime, dim)
+		} catch (e) {
+			return this.error(500, e.message)
+		}
+
+		return this.success(200, '成功', list)
 	}
 
 	// API成功率：

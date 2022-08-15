@@ -179,6 +179,7 @@
     "mapping": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view\\config\\config.default.js"
   },
   "cors": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-cors\\config\\config.default.js",
+  "validate": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-validate\\config\\config.default.js",
   "env": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
   "name": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
   "cookies": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
@@ -201,6 +202,7 @@
       "egg": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "egg-cors": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "egg-sequelize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+      "egg-validate": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "geoip-lite": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "moment": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "mysql2": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",

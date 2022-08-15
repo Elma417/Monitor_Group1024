@@ -1,4 +1,6 @@
 const { Service } = require('egg')
+const { Op } = require('sequelize')
+const sequelize = require('sequelize')
 
 class LogService extends Service {
 	// 保存日志

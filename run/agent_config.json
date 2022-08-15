@@ -177,6 +177,7 @@
       "timezone": "+08:00"
     },
     "cors": {},
+    "validate": {},
     "env": "local",
     "name": "Monitor_Group1024",
     "keys": "<String len: 36>",
@@ -200,6 +201,7 @@
         "egg": "^2",
         "egg-cors": "^2.2.3",
         "egg-sequelize": "^6.0.0",
+        "egg-validate": "^2.0.2",
         "geoip-lite": "^1.4.5",
         "moment": "^2.29.4",
         "mysql2": "^2.3.3",
@@ -524,6 +526,17 @@
       "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\plugin.js",
       "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-cors",
       "version": "2.2.3"
+    },
+    "validate": {
+      "enable": true,
+      "package": "egg-validate",
+      "name": "validate",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-validate",
+      "version": "2.0.2"
     }
   },
   "appInfo": {
@@ -544,6 +557,7 @@
         "egg": "^2",
         "egg-cors": "^2.2.3",
         "egg-sequelize": "^6.0.0",
+        "egg-validate": "^2.0.2",
         "geoip-lite": "^1.4.5",
         "moment": "^2.29.4",
         "mysql2": "^2.3.3",
