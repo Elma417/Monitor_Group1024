@@ -1,0 +1,325 @@
+{
+  "keys": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+  "middleware": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+  "sequelize": {
+    "dialect": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "database": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "host": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "port": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "username": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "password": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "timezone": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js"
+  },
+  "security": {
+    "csrf": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+      "type": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "supportedRequests": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "domainWhiteList": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "protocolWhiteList": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+    "xframe": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "bodyParser": {
+    "enableTypes": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js",
+    "extendTypes": {
+      "text": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\config\\config.default.js"
+    },
+    "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "strict": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "depth": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "session": {
+    "maxAge": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-session\\config\\config.default.js",
+    "logValue": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "helper": {
+    "shtml": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "allowArrayField": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js",
+      "disable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideIgnore": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "cors": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-cors\\config\\config.default.js",
+  "validate": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg-validate\\config\\config.default.js",
+  "env": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "name": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "version": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "description": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "private": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "egg": {
+      "declarations": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "co-body": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg-cors": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg-sequelize": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg-validate": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "geoip-lite": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "moment": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "mysql2": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "ua-parser-js": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "autod": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "autod-egg": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg-ci": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "eslint": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "eslint-config-egg": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "engines": {
+      "node": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "scripts": {
+      "start": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "stop": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "dev": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "debug": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "test": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "test-local": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "cov": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "lint": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "ci": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "autod": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "ci": {
+      "version": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "type": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "repository": {
+      "type": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "url": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "author": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "license": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "baseDir": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "cacheControl": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "env": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "level": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "enablePerformanceTimer": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "logging": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "port": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "C:\\Users\\Vsolon\\.vscode\\Monitor_Group1024-backstage\\node_modules\\egg\\config\\config.default.js"
+}
