@@ -5,6 +5,10 @@ const moment = require('moment')
 const geoip = require('geoip-lite')
 const cities = require('../../assert/cities')
 const countries = require('../../assert/countries')
+const fs = require('fs')
+const path = require('path')
+const SourceMap = require('source-map')
+const { SourceMapConsumer } = SourceMap
 
 const Controller = require('egg').Controller
 
@@ -31,6 +35,24 @@ class LogStoreController extends Controller {
 		// 解析user-agent
 		let ua = parser(ctx.request.header['user-agent'])
 
+		if (data.category === 'stability' && data.type === 'error') {
+			// 针对js错误需要使用sourceMap进行position定位
+			const rawSourceMap = JSON.parse(
+				fs.readFileSync(path.join(__dirname, `../../assert/sourceMap/${data.filename}.map`))
+			)
+			SourceMapConsumer.with(rawSourceMap, null, consumer => {
+				let position = data.position.split(':').map(item => parseInt(item))
+
+				const pos = consumer.originalPositionFor({
+					line: position[0],
+					column: position[1],
+				})
+
+				data.filename = pos.source
+				data.position = `${pos.line}:${pos.column}`
+			})
+		}
+
 		log = {
 			...log,
 
@@ -53,8 +75,6 @@ class LogStoreController extends Controller {
 		data = JSON.stringify(data)
 		log.detail = data
 
-		// console.log(log)
-
 		// 保存日志
 		try {
 			await service.log.createOneLog(log)
@@ -64,6 +84,23 @@ class LogStoreController extends Controller {
 
 		// 日志生成成功
 		ctx.response.status = 200
+	}
+
+	// sourceMap上传接口
+	async uploadMap() {
+		const { ctx } = this
+		console.log()
+
+		const body = ctx.request.body
+		for (let filename in ctx.request.body) {
+			const writeStream = fs.createWriteStream(
+				path.join(__dirname, '../../assert/sourceMap/', filename)
+			)
+			writeStream.write(body[filename])
+			writeStream.end()
+		}
+
+		ctx.body = 'ok'
 	}
 }
 

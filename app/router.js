@@ -12,6 +12,7 @@ module.exports = app => {
 	 */
 	// 上传日志
 	router.all('/logstore/track', controller.logstore.track)
+	router.post('/logstore/uploadMap', controller.logstore.uploadMap)
 
 	/*
 	 * 中台可视化接口

@@ -206,6 +206,7 @@
       "geoip-lite": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "moment": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "mysql2": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+      "source-map": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
       "ua-parser-js": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
