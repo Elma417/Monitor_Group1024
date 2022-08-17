@@ -3,7 +3,7 @@ const { Op } = require('sequelize')
 const sequelize = require('sequelize')
 
 class MonitorService extends Service {
-	//时间粒度统一处理
+	// 时间粒度统一处理
 	formatDim(dim) {
 		let timeDim = null
 		switch (dim) {
@@ -21,6 +21,13 @@ class MonitorService extends Service {
 				break
 		}
 		return timeDim;
+	}
+
+	// 实时大盘
+	// 数据格式：JS异常数量、API平均成功率、PF、白屏异常总数、资源异常总数、pv
+	async getMarketData(time) {
+
+
 	}
 
 	// 获取日志
@@ -58,57 +65,75 @@ class MonitorService extends Service {
 
 	// 获取api成功率
 	async getApiSuccessRateData(startTime, endTime, dim) {
-		const { ctx } = this
 
 		let timeDim = this.formatDim(dim);
 
-		const ret = await ctx.model.Log.findAll({
+		// api成功数量
+		const { count } = await this.ctx.model.Log.findAndCountAll({
+			attributes: [['detail', 'successCount']],
+			where: {
+				type: 'xhr',
+				created_at: {
+					[Op.between]: [startTime, endTime],
+				},
+				detail: {
+					[Op.regexp]: 'true'
+				}
+			}
+		});
+
+		const ret = await this.ctx.model.Log.findAll({
 			attributes: [
-				'detail',
-				// [sequelize.literal("SELECT COUNT(*) FROM Log"), 'resNum'],
+
+				[sequelize.fn('COUNT', sequelize.col('detail')), 'xhrCount'],
+				[sequelize.fn('COUNT', sequelize.col('type')), 'reqNum'],
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
 			],
-			// group: [
-			// 	sequelize.Sequelize.fn(
-			// 		'DATE_FORMAT',
-			// 		sequelize.Sequelize.col('created_at'),
-			// 		timeDim
-			// 	),
-			// ],
+			group: [
+				sequelize.Sequelize.fn(
+					'DATE_FORMAT',
+					sequelize.Sequelize.col('created_at'),
+					timeDim
+				),
+			],
 			where: {
 				type: 'xhr',
 				created_at: {
 					[Op.between]: [startTime, endTime],
 				},
 			},
-		})
+		});
 
-		//对detail进行筛选
-
-
-		return ret
+		return { ret, success:count};
 	}
 
-	//获取页面性能
+	// 获取页面性能
+	// 数据格式：时间、 首屏绘制时间（First Paint，FP）、
+	// 首屏内容绘制时间（First Contentful Paint，FCP）、 DOM Ready（页面解析完成的时间）
 	async getPagePfmData(startTime, endTime, dim) {
 
 		let timeDim = this.formatDim(dim);
 
-		const result = await this.ctx.model.Log.findAll({
+		 const fp = await this.ctx.model.Log.findAll({
 			attributes: [
+				'detail',
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
 			],
+			 group: [
+				 sequelize.Sequelize.fn(
+					 'DATE_FORMAT',
+					 sequelize.Sequelize.col('created_at'),
+					 timeDim
+				 ),
+			 ],
 			where: {
-				type: {
-					[Op.or]: ['paint', 'timing']
-				},
+				type: 'paint',
 				created_at: {
 					[Op.between]: [startTime, endTime]
 				}
 			}
 		})
 
-		return result;
 	}
 
 	// 资源异常
@@ -116,12 +141,18 @@ class MonitorService extends Service {
 	async getResourceExcData(startTime, endTime, dim) {
 		let timeDim = this.formatDim(dim);
 
-		const result = await this.ctx.model.Log.findAll({
+		return  await this.ctx.model.Log.findAll({
 			attributes: [
 				[sequelize.literal("count(case when type='pv' then 1 end)"),'pv'],
 				// [sequelize.literal("count(case when type='timing' then 1 end)")],
-				[sequelize.literal("count(case when uuid)"),'uv'],
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
+			],
+			group: [
+				sequelize.Sequelize.fn(
+					'DATE_FORMAT',
+					sequelize.Sequelize.col('created_at'),
+					timeDim
+				),
 			],
 			where: {
 				type: {
@@ -130,7 +161,6 @@ class MonitorService extends Service {
 			}
 		})
 
-		return result;
 	}
 
 	// 白屏异常
@@ -138,11 +168,22 @@ class MonitorService extends Service {
 	async getWhiteScreenData(startTime, endTime, dim) {
 		let timeDim = this.formatDim(dim);
 
-		const result = await this.ctx.model.Log.findAll({
+		return await this.ctx.model.Log.findAll({
+			attributes: [
+				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
+			],
+			group: [
+				sequelize.Sequelize.fn(
+					'DATE_FORMAT',
+					sequelize.Sequelize.col('created_at'),
+					timeDim
+				),
+			],
+			where: {
 
+			}
 		})
 
-		return result;
 	}
 
 	// 页面访问
@@ -150,6 +191,26 @@ class MonitorService extends Service {
 	async getPageAccessData(startTime, endTime, dim) {
 		let timeDim = this.formatDim(dim);
 
+		return await this.ctx.model.Log.findAll({
+			attributes: [
+				// [sequelize.fn('COUNT', sequelize.col('type')), 'pv'],
+				[sequelize.literal("count(case when type='pv' then 1 end)"), 'pv'],
+				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
+			],
+			group: [
+				sequelize.Sequelize.fn(
+					'DATE_FORMAT',
+					sequelize.Sequelize.col('created_at'),
+					timeDim
+				),
+			],
+			where: {
+				// type: 'pv',
+				created_at: {
+					[Op.between]: [startTime, endTime]
+				}
+			}
+		})
 
 	}
 }

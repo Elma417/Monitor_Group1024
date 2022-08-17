@@ -13,3 +13,4 @@ module.exports = {
 	quoteProps: 'as-needed', // 给对象里的属性名是否要加上引号，默认为as-needed，即根据需要决定
 	trailingComma: 'es5', // 每个键值对后面是否一定有尾随逗号，默认es5，保持默认即可
 }
+

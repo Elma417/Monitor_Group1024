@@ -1,4 +1,5 @@
 'use strict'
+
 const Controller = require('egg').Controller
 
 const queryRule = {
@@ -29,6 +30,25 @@ class MonitorApiController extends Controller {
 			success: false,
 			message: message || 'service error',
 		}
+	}
+
+	/*
+	 * 实时大盘
+	 */
+	async marketData() {
+		const { ctx, service } = this
+
+		let url = url.split('-')[0].split('/')
+
+		let list = []
+		try {
+			const { startTime, endTime, dim } = ctx.query
+			list = await service.monitor.getMarketData(startTime, endTime, dim)
+		} catch (e) {
+			return this.error(500, e.message)
+		}
+
+		return this.success(200, '成功', list)
 	}
 
 	/*
@@ -147,7 +167,7 @@ class MonitorApiController extends Controller {
 		let list = [];
 		try {
 			const { startTime, endTime, dim } = ctx.query
-			list = await service.monitor.getApiSuccessRateData(startTime, endTime, dim)
+			list = await service.monitor.getWhiteScreenData(startTime, endTime, dim)
 		} catch (e) {
 			return this.error(500, e.message)
 		}
@@ -173,7 +193,7 @@ class MonitorApiController extends Controller {
 		let list = [];
 		try {
 			const { startTime, endTime, dim } = ctx.query
-			list = await service.monitor.getApiSuccessRateData(startTime, endTime, dim)
+			list = await service.monitor.getPageAccessData(startTime, endTime, dim)
 		} catch (e) {
 			return this.error(500, e.message)
 		}

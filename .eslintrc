@@ -2,6 +2,26 @@
   "extends": "eslint-config-egg",
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": "error"  
+    "prettier/prettier": "error"
+  },
+
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "globals": {
+    "getApp": false,
+    "Page": false,
+    "wx": false,
+    "App": false,
+    "getCurrentPages": false,
+    "Component": false
   }
 }
