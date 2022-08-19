@@ -7,7 +7,7 @@ import TimingObserver from "./lib/TimingObserver";
 import addEvent from "./utils/addEvent";
 import { sendPv as $sendPv } from "./lib/PVObserver";
 const Monitor = function (config) {
-    let { path, onError, onPaint, onPV, onXHR, onTiming } = config;
+    let { path, onError, onPaint, onPV, onXHR, onTiming, enableSPA } = config;
     if (!path) {
         throw new Error('Upload interface is required.')
     }
@@ -34,7 +34,7 @@ const Monitor = function (config) {
         setTimeout(handler, 30000)
     }
     if (onPV === undefined || onPV) {
-        PVObserver()
+        PVObserver(enableSPA)
     }
     if (onXHR === undefined || onXHR) {
         XHRObserver()
