@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-// const UploadSourceMapPlugin = require("upload-sourcemap-plugin");
+const UploadSourceMapPlugin = require("monitor-upload-sourcemap-plugin");
 
 module.exports = {
 	mode: "development",
@@ -38,7 +38,9 @@ module.exports = {
 		}),
 		new HtmlWebpackPlugin({ template: "./public/index.ejs" }),
 		new CleanWebpackPlugin(),
-		// new UploadSourceMapPlugin(),
+		new UploadSourceMapPlugin({
+			uploadURL: "http://182.61.146.211:7001/logstore/uploadMap",
+		}),
 	],
 	devServer: {
 		static: {
