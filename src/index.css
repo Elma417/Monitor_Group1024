@@ -1534,7 +1534,7 @@ img {
 .elevator {
     position: fixed;
     left: calc(80% - 30px);
-    top: 265px;
+    top: 120px;
     margin-left: 180px;
     z-index: 1001;
 }
