@@ -12,8 +12,12 @@ Monitor({
 });
 
 /*
- * 绑定各种错误
+ * api请求
  */
+var xhr = new XMLHttpRequest();
+xhr.open("get", "http://182.61.146.211:7001/");
+xhr.send(null);
+console.log(xhr.responseText);
 
 $(function () {
 	let y, y1;
