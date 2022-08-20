@@ -24,6 +24,21 @@ function JSexc(props) {
   //   getTime();
   // }, []);
 
+
+
+  // 
+  let excCount;
+  let body = body.filter((el) => {
+    if(el.type === 'error'
+        && el.detail.errorType === 'jsError') {
+      excCount ++;
+      delete el.type
+      Object.defineProperty(el, "content", Object.getOwnPropertyDescriptor(el, "message"))
+      return el
+    }
+  })
+
+
   useEffect(() => {
     setToday(props.today);
     const fetch = async () => {
@@ -51,7 +66,7 @@ function JSexc(props) {
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
       {/* 滚动窗口框（含滚动条） */}
       <div
-        className="flex-grow w-full flex flex-col justify-start items-center  
+        className="flex-grow w-full flex flex-col justify-start items-center
       gap-1 overflow-y-scroll"
       >
         {/* 可变长内容 */}

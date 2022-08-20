@@ -2,6 +2,7 @@
   "name": "dics",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@ant-design/charts": "^1.4.2",
     "@ant-design/plots": "^1.2.1",
