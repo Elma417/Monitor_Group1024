@@ -35,7 +35,11 @@ class LogStoreController extends Controller {
 		// 解析user-agent
 		let ua = parser(ctx.request.header['user-agent'])
 
-		if (data.category === 'stability' && data.type === 'error') {
+		if (
+			data.category === 'stability' &&
+			data.type === 'error' &&
+			data.errorType === 'jsError'
+		) {
 			// 针对js错误需要使用sourceMap进行position定位
 			const rawSourceMap = JSON.parse(
 				fs.readFileSync(path.join(__dirname, `../../assert/sourceMap/${data.filename}.map`))
