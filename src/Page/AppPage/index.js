@@ -10,7 +10,7 @@ import PageAccess from "../PageAccess";
 
 //页面控制
 function AppPage() {
-  const [pageChoice, setPageChoice] = useState(3);
+  const [pageChoice, setPageChoice] = useState(1);
   const [today, setToday] = useState("");
   const [year, setYear] = useState(0);
   const [month, setMonth] = useState(0);
@@ -61,13 +61,13 @@ function AppPage() {
       <div className="h-full flex-grow flex flex-col justify-start items-center ">
         {/* 页眉 */}
         <div
-          className="h-16 w-full flex-shrink-0 flex justify-start items-center
+          className="h-12 w-full flex-shrink-0 flex justify-start items-center
          text-gray-700 bg-gray-50 px-16 select-none "
         >
           前端异常监控系统
         </div>
         {/* 时间 */}
-        <div className="h-12 w-full bg-gray-200 text-gray-600 px-16 flex justify-start items-center shrink-0">
+        <div className="h-12 w-full bg-gray-300 text-gray-600 px-16 flex justify-start items-center shrink-0">
           {`${year} 年 ${month} 月 ${day} 日   ${hour} ：${minute} `}
         </div>
         {/* 数据可视化页面 */}

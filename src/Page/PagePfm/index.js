@@ -1,29 +1,18 @@
 import React, { useState, useEffect } from "react";
 import PagePfmTrend from "../../Component/PagePfmCPN/PagePfmTrend";
 import Details from "../../Component/PagePfmCPN/Details";
-import OSRing from "../../Component/PagePfmCPN/OSRing";
+import RingChar from "../../Component/RingChar";
+import MapChar from "../../Component/MapChar";
 
-function PagePfm() {
+function PagePfm(props) {
   const [today, setToday] = useState("");
-  const [pfCon, setPfCon] = useState(0); //JS异常次数
-  const [pfContentCon, setPfContentCon] = useState(0); // 页面访问量（pv）
-  const [pfDoneCon, setPfDoneCon] = useState(0); // 平均请求耗时
-
-  function getTime() {
-    let today = new Date();
-    console.log("today:" + today);
-
-    let d = `${today.getFullYear()}-${today.getMonth() < 9 ? "0" : ""}${
-      today.getMonth() + 1
-    }-${today.getDate()}`;
-    setToday(d);
-  }
+  const [pfCon, setPfCon] = useState(0); //首屏绘制时间
+  const [pfContentCon, setPfContentCon] = useState(0); // 首屏内容绘制时间
+  const [pfDoneCon, setPfDoneCon] = useState(0); // 页面解析完成的时间
 
   useEffect(() => {
-    if (today === "") {
-      getTime();
-    }
-  });
+    setToday(props.today);
+  }, [props.today]);
 
   return (
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
@@ -47,15 +36,17 @@ function PagePfm() {
             </div>
             <div className="h-full w-60 flex-grow flex flex-col justify-between items-center p-1">
               <p className="text-gray-500">首屏绘制时间</p>
-              <p className="text-gray-600 text-3xl font-bold">132ms</p>
+              <p className="text-gray-600 text-3xl font-bold">{pfCon} ms</p>
             </div>
             <div className="h-full w-60 flex-grow flex flex-col justify-between items-center p-1">
               <p className="text-gray-500">首屏内容绘制时间</p>
-              <p className="text-gray-600 text-3xl font-bold">780ms</p>
+              <p className="text-gray-600 text-3xl font-bold">
+                {pfContentCon} ms
+              </p>
             </div>
             <div className="h-full w-60 flex-grow flex flex-col justify-between items-center p-1">
               <p className="text-gray-500">页面解析完成的时间</p>
-              <p className="text-gray-600 text-3xl font-bold">1243ms</p>
+              <p className="text-gray-600 text-3xl font-bold">{pfDoneCon} ms</p>
             </div>
           </div>
           {/* 数据可视化大图表 */}
@@ -75,13 +66,22 @@ function PagePfm() {
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 客户端
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
             </div>
             <div className="h-full w-1/2 flex flex-col justify-center items-center p-2">
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 操作系统
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
+            </div>
+          </div>
+          {/* 地域热力图 */}
+          <div className="h-600 w-11/12 rounded p-2 bg-gray-50 shrink-0 mt-4 flex flex-col justify-between items-center">
+            <div className="h-12 w-5/6 pt-2 text-xl text-blue-600 font-bold">
+              异常地域分布
+            </div>
+            <div className="flex-grow h-500 w-full min-h-0 ">
+              <MapChar></MapChar>
             </div>
           </div>
         </div>

@@ -1,26 +1,15 @@
 import React, { useState, useEffect } from "react";
 import PageAccessTrend from "../../Component/PageAccessCPN/PageAccessTrend";
 import Details from "../../Component/PageAccessCPN/Details";
-import OSRing from "../../Component/PageAccessCPN/OSRing";
+import RingChar from "../../Component/RingChar";
+import MapChar from "../../Component/MapChar";
 
-function PageAccess() {
+function PageAccess(props) {
   const [today, setToday] = useState("");
 
-  function getTime() {
-    let today = new Date();
-    console.log("today:" + today);
-
-    let d = `${today.getFullYear()}-${today.getMonth() < 9 ? "0" : ""}${
-      today.getMonth() + 1
-    }-${today.getDate()}`;
-    setToday(d);
-  }
-
   useEffect(() => {
-    if (today === "") {
-      getTime();
-    }
-  });
+    setToday(props.today);
+  }, [props.today]);
 
   return (
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
@@ -48,13 +37,22 @@ function PageAccess() {
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 客户端
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
             </div>
             <div className="h-full w-1/2 flex flex-col justify-center items-center p-2">
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 操作系统
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
+            </div>
+          </div>
+          {/* 地域热力图 */}
+          <div className="h-600 w-11/12 rounded p-2 bg-gray-50 shrink-0 mt-4 flex flex-col justify-between items-center">
+            <div className="h-12 w-5/6 pt-2 text-xl text-blue-600 font-bold">
+              异常地域分布
+            </div>
+            <div className="flex-grow h-500 w-full min-h-0 ">
+              <MapChar></MapChar>
             </div>
           </div>
         </div>

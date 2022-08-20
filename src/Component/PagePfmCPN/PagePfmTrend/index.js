@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import ReactDOM from "react-dom";
-// import { DualAxes } from "@ant-design/plots";
+import ReactEcharts from "echarts-for-react";
+
 // import axios from "axios";
 
-// JS异常页面趋势图组件
-// props : today(string)
+// 页面性能趋势图组件
+// props : today(string) data(一个对象,画趋势图用)
 export default function PagePfmTrend(props) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
@@ -87,140 +87,133 @@ export default function PagePfmTrend(props) {
         </div>
       </div>
       {/* 图表区 */}
-      <div className="h-80 w-full flex-grow min-h-min flex justify-center items-center overflow-hidden bg-pink-100 "></div>
+      <div className="h-80 w-full flex-grow min-h-0 flex justify-center items-center bg-pink-10 pt-3 ">
+        <Char></Char>
+      </div>
     </div>
   );
 }
 
-// Char
-// const PagePfmChar = () => {
-//   const [data, setData] = useState([
-//     {
-//       time: "11:04",
-//       JSexcNum: 10868,
-//       pv: 2000,
-//     },
-//     {
-//       time: "11:06",
-//       JSexcNum: 1086,
-//       pv: 649,
-//     },
-//     {
-//       time: "11:08",
-//       JSexcNum: 10074,
-//       pv: 1292,
-//     },
-//     {
-//       time: "11:10",
-//       JSexcNum: 9087,
-//       pv: 1200,
-//     },
-//     {
-//       time: "11:12",
-//       JSexcNum: 11232,
-//       pv: 1649,
-//     },
-//     {
-//       time: "11:14",
-//       JSexcNum: 10868,
-//       pv: 2000,
-//     },
-//     {
-//       time: "11:16",
-//       JSexcNum: 1086,
-//       pv: 649,
-//     },
-//     {
-//       time: "11:18",
-//       JSexcNum: 10074,
-//       pv: 1292,
-//     },
-//     {
-//       time: "11:20",
-//       JSexcNum: 9087,
-//       pv: 1200,
-//     },
-//     {
-//       time: "11:22",
-//       JSexcNum: 11232,
-//       pv: 1649,
-//     },
-//   ]);
-//   const [startTime, setStartTime] = useState("");
-//   const [endTime, setEndTime] = useState("");
-
-//   // 获取当前时间
-//   function getTime() {
-//     let date = new Date();
-//     console.log("date:" + date);
-
-//     let et = `${date.getFullYear()}-${
-//       date.getMonth() + 1
-//     }-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`;
-//     setEndTime(et);
-
-//     let st = `${date.getFullYear()}-${
-//       date.getMonth() + 1
-//     }-${date.getDate()} 0:0`;
-//     setStartTime(st);
-
-//     console.log("et:" + et);
-//   }
-
-//   useEffect(() => {
-//     const timer = window.setInterval(() => {
-//       getTime();
-//     }, 2000);
-//     //request
-//     const fetchJSexcData = async () => {
-//       const res = await axios.get("http://localhost:3100/JSexcData", {
-//         params: {
-//           startTime: startTime,
-//           endTime: endTime,
-//           dim: "min",
-//         },
-//       });
-//       setData(res.data);
-//       //终端打印查看
-//       console.log("data:" + JSON.stringify(data));
-//     };
-//     fetchJSexcData();
-//     //delete timer
-//     return () => {
-//       clearInterval(timer);
-//     };
-//   }, []);
-
-//   const config = {
-//     data: [data, data],
-//     width: 1500,
-//     height: 450,
-//     autoFit: false,
-//     xField: "time",
-//     yField: ["JSexcNum", "pv"], //图例
-//     limitInPlot: false,
-//     padding: [20, 20, 70, 30],
-//     // 需要设置底部 padding 值，同 css
-//     slider: {},
-//     meta: {
-//       time: {
-//         sync: false, // 开启之后 slider 无法重绘
-//       },
-//       JSexcNum: {
-//         alias: "JS异常数量",
-//       },
-//       pv: {
-//         alias: "页面访问量",
-//       },
-//     },
-//     geometryOptions: [
-//       {
-//         geometry: "column",
-//       },
-//       {
-//         geometry: "line",
-//       },
-//     ],
-//   };
-//   return <DualAxes {...config} />;
-// };
+// 趋势图
+// props : data
+function Char(props) {
+  const colors = ["#5470C6", "#91CC75", "#EE6666"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "12%",
+      left: "12%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["fp", "fcp", "DOM_Ready"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "fp",
+        position: "right",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value} ms",
+        },
+      },
+      {
+        type: "value",
+        name: "fcp",
+        position: "right",
+        alignTicks: true,
+        offset: 80,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[1],
+          },
+        },
+        axisLabel: {
+          formatter: "{value} ms",
+        },
+      },
+      {
+        type: "value",
+        name: "DOM_Ready",
+        position: "left",
+        alignTicks: true,
+        offset: 80,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[2],
+          },
+        },
+        axisLabel: {
+          formatter: "{value} ms",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 50,
+        end: 100,
+      },
+      {
+        start: 50,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "fp",
+        type: "bar",
+        data: [123, 145, 331, 132, 324, 231], //props.data.fp, //y轴数据列表
+      },
+      {
+        name: "fcp",
+        type: "bar",
+        yAxisIndex: 1,
+        data: [121, 231, 123, 412, 231, 251], //props.data.fcp, //y轴数据列表
+      },
+      {
+        name: "DOM_Ready",
+        type: "line",
+        yAxisIndex: 2,
+        data: [121, 231, 123, 412, 231, 251], //props.data.DOM_Ready, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}

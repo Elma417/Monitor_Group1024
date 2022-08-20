@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-// import ReactDOM from "react-dom";
-// import { DualAxes } from "@ant-design/plots";
+import ReactEcharts from "echarts-for-react";
+
 // import axios from "axios";
 
 // 白屏异常页面趋势图组件
-// props : today(string)
+// props : today(string) data(一个对象,画趋势图用)
 export default function WhiteScreenTrend(props) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
@@ -87,14 +87,93 @@ export default function WhiteScreenTrend(props) {
         </div>
       </div>
       {/* 图表区 */}
-      <div className="h-80 w-full flex-grow min-h-min flex justify-center items-center overflow-hidden bg-pink-100 "></div>
+      <div className="h-80 w-full flex-grow min-h-0 flex justify-center items-center bg-pink-10 pt-3 ">
+        <Char></Char>
+      </div>
     </div>
   );
 }
 
-// Char
-// const WhiteScreenChar = () => {
-//   const [data, setData] = useState([
+// 趋势图
+// props : data
+function Char(props) {
+  const colors = ["#EE6666", "#5470C6", "#91CC75"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "10%",
+      left: "5%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["WhiteScreenNum"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "WhiteScreenNum",
+        position: "left",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 0,
+        end: 100,
+      },
+      {
+        start: 0,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "WhiteScreenNum",
+        type: "line",
+        data: [0, 1, 0, 0, 0, 0], //props.data.WhiteScreenNum, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}
+
 //     {
 //       time: "11:04",
 //       JSexcNum: 10868,

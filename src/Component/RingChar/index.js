@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
+// import React, { useState, useEffect } from "react";
+// import ReactDOM from "react-dom";
 import { Pie, measureTextWidth } from "@ant-design/plots";
 
-export default function OSRing() {
+export default function OSRing(props) {
   function renderStatistic(containerWidth, text, style) {
     const { width: textWidth, height: textHeight } = measureTextWidth(
       text,
@@ -56,6 +56,8 @@ export default function OSRing() {
       value: 5,
     },
   ];
+
+  // const data = props.data;
   const config = {
     appendPadding: 10,
     data,

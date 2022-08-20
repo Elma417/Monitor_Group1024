@@ -1,11 +1,12 @@
-import JSexcChar from "../../Component/RealTimeChar/JSexcChar";
-import APISuccessRateChar from "../../Component/RealTimeChar/APISuccessRateChar";
-import PagePfmChar from "../../Component/RealTimeChar/PagePfmChar";
-import ResourceExcChar from "../../Component/RealTimeChar/ResourceExcChar";
-import WhiteScreenChar from "../../Component/RealTimeChar/WhiteScreenChar";
-import PageAccessChar from "../../Component/RealTimeChar/PageAccessChar";
+// import JSexcChar from "../../Component/RealTimeChar/JSexcChar";
+// import APISuccessRateChar from "../../Component/RealTimeChar/APISuccessRateChar";
+// import PagePfmChar from "../../Component/RealTimeChar/PagePfmChar";
+// import ResourceExcChar from "../../Component/RealTimeChar/ResourceExcChar";
+// import WhiteScreenChar from "../../Component/RealTimeChar/WhiteScreenChar";
+// import PageAccessChar from "../../Component/RealTimeChar/PageAccessChar";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ReactEcharts from "echarts-for-react";
 
 //实时大盘
 function RealTime() {
@@ -64,7 +65,7 @@ function RealTime() {
     >
       {/* 第一行图表 */}
       <div
-        className="h-45/100 w-full bg-gray-200 flex justify-between items-center
+        className="h-1/2 w-full shrink-0 bg-gray-200 flex justify-between items-center
         py-3 px-4 gap-4"
       >
         {/* JS异常 */}
@@ -82,7 +83,7 @@ function RealTime() {
             {jsNum}
           </div>
           {/* 数据可视化图表 */}
-          <div className="h-full w-full ">
+          <div className="h-full w-full bg-blue-20">
             <JSexcChar></JSexcChar>
           </div>
         </div>
@@ -130,7 +131,7 @@ function RealTime() {
 
       {/* 第二行图表 */}
       <div
-        className="h-45/100 w-full bg-gray-200  flex justify-between items-center
+        className="h-1/2 w-full shrink-0 bg-gray-200  flex justify-between items-center
        py-3 px-4 gap-4"
       >
         {/* 白屏异常 */}
@@ -198,3 +199,623 @@ function RealTime() {
 }
 
 export default RealTime;
+
+// 各种异常的趋势图
+// props : data
+function JSexcChar(props) {
+  const colors = ["#5470C6", "#91CC75", "#EE6666"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "10%",
+      left: "10%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["JSexcNum", "pv"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "JSexcNum",
+        position: "left",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+      {
+        type: "value",
+        name: "pv",
+        position: "right",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[1],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 0,
+        end: 100,
+      },
+      {
+        start: 0,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "JSexcNum",
+        type: "bar",
+        data: [123, 145, 331, 132, 324, 231], //props.data.time, //y轴数据列表
+      },
+      {
+        name: "pv",
+        type: "line",
+        yAxisIndex: 1,
+        data: [121, 231, 123, 412, 231, 251], //props.data.time, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}
+
+function APISuccessRateChar(props) {
+  const colors = ["#5470C6", "#91CC75", "#EE6666"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "12%",
+      left: "10%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["reqNum", "successRate"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "reqNum",
+        position: "left",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+      {
+        type: "value",
+        name: "successRate",
+        position: "right",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[1],
+          },
+        },
+        axisLabel: {
+          formatter: "{value} %",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 0,
+        end: 100,
+      },
+      {
+        start: 0,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "reqNum",
+        type: "bar",
+        data: [123, 145, 331, 132, 324, 231], //props.data.reqNum, //y轴数据列表
+      },
+      {
+        name: "successRate",
+        type: "line",
+        yAxisIndex: 1,
+        data: [121, 231, 123, 412, 231, 251], //props.data.successRate, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}
+
+function PagePfmChar(props) {
+  const colors = ["#5470C6", "#91CC75", "#EE6666"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "25%",
+      left: "12%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["fp", "fcp", "DOM_Ready"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "fp",
+        position: "right",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value} ms",
+        },
+      },
+      {
+        type: "value",
+        name: "fcp",
+        position: "right",
+        alignTicks: true,
+        offset: 60,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[1],
+          },
+        },
+        axisLabel: {
+          formatter: "{value} ms",
+        },
+      },
+      {
+        type: "value",
+        name: "DOM_Ready",
+        position: "left",
+        alignTicks: true,
+
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[2],
+          },
+        },
+        axisLabel: {
+          formatter: "{value} ms",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 0,
+        end: 100,
+      },
+      {
+        start: 0,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "fp",
+        type: "bar",
+        data: [123, 145, 331, 132, 324, 231], //props.data.fp, //y轴数据列表
+      },
+      {
+        name: "fcp",
+        type: "bar",
+        yAxisIndex: 1,
+        data: [121, 231, 123, 412, 231, 251], //props.data.fcp, //y轴数据列表
+      },
+      {
+        name: "DOM_Ready",
+        type: "line",
+        yAxisIndex: 2,
+        data: [121, 231, 123, 412, 231, 251], //props.data.DOM_Ready, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}
+
+function WhiteScreenChar(props) {
+  const colors = ["#EE6666", "#5470C6", "#91CC75"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "5%",
+      left: "12%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["WhiteScreenNum"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "WhiteScreenNum",
+        position: "left",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 0,
+        end: 100,
+      },
+      {
+        start: 0,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "WhiteScreenNum",
+        type: "line",
+        data: [0, 1, 0, 0, 0, 0], //props.data.WhiteScreenNum, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}
+
+function ResourceExcChar(props) {
+  const colors = ["#5470C6", "#91CC75", "#EE6666"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "20%",
+      left: "10%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["ResourceExcNum", "pv", "uv"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "ResourceExcNum",
+        position: "left",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+      {
+        type: "value",
+        name: "pv",
+        position: "right",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[1],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+      {
+        type: "value",
+        name: "uv",
+        position: "right",
+        alignTicks: true,
+        offset: 40,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[2],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 0,
+        end: 100,
+      },
+      {
+        start: 0,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "ResourceExcNum",
+        type: "bar",
+        data: [123, 145, 331, 132, 324, 231], //props.data.ResourceExcNum, //y轴数据列表
+      },
+      {
+        name: "pv",
+        type: "line",
+        yAxisIndex: 1,
+        data: [121, 231, 123, 412, 231, 251], //props.data.pv, //y轴数据列表
+      },
+      {
+        name: "uv",
+        type: "line",
+        yAxisIndex: 2,
+        data: [121, 231, 123, 412, 231, 251], //props.data.uv, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}
+
+function PageAccessChar(props) {
+  const colors = ["#5470C6", "#91CC75", "#EE6666"];
+  const option = {
+    color: colors,
+    tooltip: {
+      trigger: "axis",
+      axisPointer: {
+        type: "cross",
+      },
+    },
+    grid: {
+      right: "10%",
+      left: "10%",
+    },
+    toolbox: {
+      feature: {
+        dataView: { show: true, readOnly: false },
+        restore: { show: true },
+        saveAsImage: { show: true },
+      },
+    },
+    legend: {
+      data: ["pv", "uv"],
+    },
+    xAxis: [
+      {
+        type: "category",
+        axisTick: {
+          alignWithLabel: true,
+        },
+        // prettier-ignore
+        data:["11:00","11:02","11:04","11:06","11:08","11:10"], //props.data.time, //x轴数据列表
+      },
+    ],
+    yAxis: [
+      {
+        type: "value",
+        name: "pv",
+        position: "left",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[0],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+      {
+        type: "value",
+        name: "uv",
+        position: "right",
+        alignTicks: true,
+        axisLine: {
+          show: true,
+          lineStyle: {
+            color: colors[1],
+          },
+        },
+        axisLabel: {
+          formatter: "{value}",
+        },
+      },
+    ],
+    dataZoom: [
+      {
+        type: "inside",
+        start: 0,
+        end: 100,
+      },
+      {
+        start: 0,
+        end: 100,
+      },
+    ],
+    series: [
+      {
+        name: "pv",
+        type: "bar",
+        data: [123, 145, 331, 132, 324, 231], //props.data.time, //y轴数据列表
+      },
+      {
+        name: "uv",
+        type: "line",
+        yAxisIndex: 1,
+        data: [121, 231, 123, 412, 231, 251], //props.data.time, //y轴数据列表
+      },
+    ],
+  };
+  return (
+    <ReactEcharts
+      option={option}
+      style={{ height: "100%", width: "100%" }}
+    ></ReactEcharts>
+  );
+}

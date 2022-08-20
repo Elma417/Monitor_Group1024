@@ -2,9 +2,9 @@
   "name": "dics",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@ant-design/charts": "^1.4.2",
+    "@ant-design/maps": "^1.0.3",
     "@ant-design/plots": "^1.2.1",
     "@reduxjs/toolkit": "^1.8.4",
     "@testing-library/jest-dom": "^5.14.1",

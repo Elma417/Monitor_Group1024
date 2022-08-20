@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import JSexcBar from "../JSexcBar";
+import JSexcBar from "../JSexcBar";
 
 // API成功率详情组件
 // props : today(string)

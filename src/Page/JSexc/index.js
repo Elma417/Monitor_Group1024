@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import JSexcTrend from "../../Component/JSescCPN/JSexcTrend";
 import Details from "../../Component/JSescCPN/Details";
-import OSRing from "../../Component/JSescCPN/OSRing";
+import RingChar from "../../Component/RingChar";
+import MapChar from "../../Component/MapChar";
 import axios from "axios";
 
 // props : today
@@ -9,35 +10,6 @@ function JSexc(props) {
   const [today, setToday] = useState("");
   const [JSexcNum, setJSexcNum] = useState(0); //JS异常次数
   const [PvNum, setPvNum] = useState(0); // 页面访问量（pv）
-
-  // function getTime() {
-  //   let today = new Date();
-  //   console.log("today:" + today);
-
-  //   let d = `${today.getFullYear()}-${today.getMonth() < 9 ? "0" : ""}${
-  //     today.getMonth() + 1
-  //   }-${today.getDate()}`;
-  //   setToday(d);
-  // }
-
-  // useEffect(() => {
-  //   getTime();
-  // }, []);
-
-
-
-  // 
-  let excCount;
-  let body = body.filter((el) => {
-    if(el.type === 'error'
-        && el.detail.errorType === 'jsError') {
-      excCount ++;
-      delete el.type
-      Object.defineProperty(el, "content", Object.getOwnPropertyDescriptor(el, "message"))
-      return el
-    }
-  })
-
 
   useEffect(() => {
     setToday(props.today);
@@ -66,7 +38,7 @@ function JSexc(props) {
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
       {/* 滚动窗口框（含滚动条） */}
       <div
-        className="flex-grow w-full flex flex-col justify-start items-center
+        className="flex-grow w-full flex flex-col justify-start items-center  
       gap-1 overflow-y-scroll"
       >
         {/* 可变长内容 */}
@@ -93,7 +65,7 @@ function JSexc(props) {
           </div>
           {/* 数据可视化大图表 */}
           <div className="h-450 w-11/12 border bg-gray-50 rounded p-2 shrink-0">
-            <JSexcTrend today={today}></JSexcTrend>
+            <JSexcTrend today={today} data={props.data}></JSexcTrend>
           </div>
           {/* 详情区 */}
           <div className="h-fit max-h-500 w-11/12 rounded shrink-0 mt-3">
@@ -108,13 +80,22 @@ function JSexc(props) {
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 客户端
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
             </div>
             <div className="h-full w-1/2 flex flex-col justify-center items-center p-2">
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 操作系统
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
+            </div>
+          </div>
+          {/* 地域热力图 */}
+          <div className="h-600 w-11/12 rounded p-2 bg-gray-50 shrink-0 mt-4 flex flex-col justify-between items-center">
+            <div className="h-12 w-5/6 pt-2 text-xl text-blue-600 font-bold">
+              异常地域分布
+            </div>
+            <div className="flex-grow h-500 w-full min-h-0 ">
+              <MapChar></MapChar>
             </div>
           </div>
         </div>

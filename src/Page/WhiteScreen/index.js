@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from "react";
 import WhiteScreenTrend from "../../Component/WhiteScreenCPN/WhiteScreenTrend";
 import Details from "../../Component/WhiteScreenCPN/Details";
-import OSRing from "../../Component/WhiteScreenCPN/OSRing";
+import RingChar from "../../Component/RingChar";
+import MapChar from "../../Component/MapChar";
 
-function WhiteScreen() {
+function WhiteScreen(props) {
   const [today, setToday] = useState("");
-
-  function getTime() {
-    let today = new Date();
-    console.log("today:" + today);
-
-    let d = `${today.getFullYear()}-${today.getMonth() < 9 ? "0" : ""}${
-      today.getMonth() + 1
-    }-${today.getDate()}`;
-    setToday(d);
-  }
+  const [WsNum, setWsNum] = useState(0); //白屏异常总数
+  const [WsRate, setWsRate] = useState(0); //  白屏率
+  const [UserNum, setUserNum] = useState(0); // 用户数
 
   useEffect(() => {
-    if (today === "") {
-      getTime();
-    }
-  });
+    setToday(props.today);
+  }, [props.today]);
 
   return (
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
@@ -44,15 +36,15 @@ function WhiteScreen() {
             </div>
             <div className="h-full w-60 flex-grow flex flex-col justify-between items-center p-1">
               <p className="text-gray-500">白屏异常总数</p>
-              <p className="text-gray-600 text-3xl font-bold">0</p>
+              <p className="text-gray-600 text-3xl font-bold">{WsNum}</p>
             </div>
             <div className="h-full w-60 flex-grow flex flex-col justify-between items-center p-1">
               <p className="text-gray-500">白屏率</p>
-              <p className="text-gray-600 text-3xl font-bold">0%</p>
+              <p className="text-gray-600 text-3xl font-bold">{WsRate} %</p>
             </div>
             <div className="h-full w-60 flex-grow flex flex-col justify-between items-center p-1">
               <p className="text-gray-500">影响用户数</p>
-              <p className="text-gray-600 text-3xl font-bold">0</p>
+              <p className="text-gray-600 text-3xl font-bold">{UserNum}</p>
             </div>
           </div>
           {/* 数据可视化大图表 */}
@@ -72,13 +64,22 @@ function WhiteScreen() {
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 客户端
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
             </div>
             <div className="h-full w-1/2 flex flex-col justify-center items-center p-2">
               <div className="h-12 w-5/6 text-xl text-blue-600 font-bold">
                 操作系统
               </div>
-              <OSRing></OSRing>
+              <RingChar></RingChar>
+            </div>
+          </div>
+          {/* 地域热力图 */}
+          <div className="h-600 w-11/12 rounded p-2 bg-gray-50 shrink-0 mt-4 flex flex-col justify-between items-center">
+            <div className="h-12 w-5/6 pt-2 text-xl text-blue-600 font-bold">
+              异常地域分布
+            </div>
+            <div className="flex-grow h-500 w-full min-h-0 ">
+              <MapChar></MapChar>
             </div>
           </div>
         </div>
