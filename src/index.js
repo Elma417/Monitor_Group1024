@@ -3,7 +3,7 @@ import $ from "jquery";
 import "./index.css";
 
 Monitor({
-	path: "http://localhost:7001/logstore/track",
+	path: "http://182.61.146.211:7001/logstore/track",
 	onError: true,
 	onPaint: true,
 	onPV: true,
@@ -16,7 +16,7 @@ Monitor({
  */
 setInterval(function () {
 	var xhr = new XMLHttpRequest();
-	xhr.open("get", "http://localhost:7001/");
+	xhr.open("get", "http://182.61.146.211:7001/");
 	xhr.send(null);
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4 && xhr.status == 200) {
@@ -28,7 +28,7 @@ setInterval(function () {
 }, 10000);
 setInterval(function () {
 	var xhr = new XMLHttpRequest();
-	xhr.open("get", "http://localhost:7001/error");
+	xhr.open("get", "http://182.61.146.211:7001/error");
 	xhr.send(null);
 	xhr.onreadystatechange = function () {
 		if (xhr.readyState == 4 && xhr.status == 200) {
