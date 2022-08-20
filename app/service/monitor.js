@@ -23,24 +23,17 @@ class MonitorService extends Service {
 		return timeDim;
 	}
 
-	// 实时大盘
-	// 数据格式：JS异常数量、API平均成功率、PF、白屏异常总数、资源异常总数、pv
-	async getMarketData(time) {
-
-
-	}
-
-	// 获取日志
-	// 数据格式：时间、JS异常数量、页面访问量
-	async getJSExcLog(startTime, endTime, dim) {
-		const { ctx } = this
-
+	//图表数据
+	async getChartData(startTime, endTime, dim, queryType) {
+		//时间粒度处理
 		let timeDim = this.formatDim(dim);
 
-		const ret = await ctx.model.Log.findAll({
+		// type处理
+
+		const JSExcLog = await this.ctx.model.Log.findAll({
 			attributes: [
-				[sequelize.literal("count(case when type='error' then 1 end)"), 'JSexcNum'],
-				[sequelize.literal("count(case when type='pv' then 1 end)"), 'pv'],
+				'detail',
+				[sequelize.fn('COUNT', sequelize.col('uuid')), 'pv'],
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
 			],
 			group: [
@@ -54,47 +47,19 @@ class MonitorService extends Service {
 				type: {
 					[Op.or]: ['pv', 'error'],
 				},
+				detail: {
+					[Op.regexp]: 'jsError'
+				},
 				created_at: {
 					[Op.between]: [startTime, endTime],
 				},
 			},
 		})
 
-		return ret
-	}
-
-	// 获取api成功率
-	async getApiSuccessRateData(startTime, endTime, dim) {
-
-		let timeDim = this.formatDim(dim);
-
-		// api成功数量
-		const { count } = await this.ctx.model.Log.findAndCountAll({
-			attributes: [['detail', 'successCount']],
-			where: {
-				type: 'xhr',
-				created_at: {
-					[Op.between]: [startTime, endTime],
-				},
-				detail: {
-					[Op.regexp]: 'true'
-				}
-			}
-		});
-
-		const ret = await this.ctx.model.Log.findAll({
+		const apiSuccessLog = await this.ctx.model.Log.findAll({
 			attributes: [
-
-				[sequelize.fn('COUNT', sequelize.col('detail')), 'xhrCount'],
-				[sequelize.fn('COUNT', sequelize.col('type')), 'reqNum'],
+				'type', 'detail',
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
-			],
-			group: [
-				sequelize.Sequelize.fn(
-					'DATE_FORMAT',
-					sequelize.Sequelize.col('created_at'),
-					timeDim
-				),
 			],
 			where: {
 				type: 'xhr',
@@ -102,74 +67,27 @@ class MonitorService extends Service {
 					[Op.between]: [startTime, endTime],
 				},
 			},
-		});
+		})
 
-		return { ret, success:count};
-	}
-
-	// 获取页面性能
-	// 数据格式：时间、 首屏绘制时间（First Paint，FP）、
-	// 首屏内容绘制时间（First Contentful Paint，FCP）、 DOM Ready（页面解析完成的时间）
-	async getPagePfmData(startTime, endTime, dim) {
-
-		let timeDim = this.formatDim(dim);
-
-		 const fp = await this.ctx.model.Log.findAll({
+		const pagePfmLog = await this.ctx.model.Log.findAll({
 			attributes: [
 				'detail',
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
 			],
-			 group: [
-				 sequelize.Sequelize.fn(
-					 'DATE_FORMAT',
-					 sequelize.Sequelize.col('created_at'),
-					 timeDim
-				 ),
-			 ],
-			where: {
-				type: 'paint',
-				created_at: {
-					[Op.between]: [startTime, endTime]
-				}
-			}
-		})
-
-	}
-
-	// 资源异常
-	// 数据格式：时间、异常次数、页面访问量（pv）、用户访问量（uv）
-	async getResourceExcData(startTime, endTime, dim) {
-		let timeDim = this.formatDim(dim);
-
-		return  await this.ctx.model.Log.findAll({
-			attributes: [
-				[sequelize.literal("count(case when type='pv' then 1 end)"),'pv'],
-				// [sequelize.literal("count(case when type='timing' then 1 end)")],
-				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
-			],
-			group: [
-				sequelize.Sequelize.fn(
-					'DATE_FORMAT',
-					sequelize.Sequelize.col('created_at'),
-					timeDim
-				),
-			],
 			where: {
 				type: {
-					[Op.or]: ['pv', 'timing']
-				}
-			}
+					[Op.or]: ['paint', 'timing']
+				},
+				created_at: {
+					[Op.between]: [startTime, endTime],
+				},
+			},
 		})
 
-	}
-
-	// 白屏异常
-	// 数据格式：时间、 白屏异常次数
-	async getWhiteScreenData(startTime, endTime, dim) {
-		let timeDim = this.formatDim(dim);
-
-		return await this.ctx.model.Log.findAll({
+		const resourceExcLog = await this.ctx.model.Log.findAll({
 			attributes: [
+				[sequelize.fn('COUNT', sequelize.col('uuid')), 'pv'],
+				'uuid', 'detail',
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
 			],
 			group: [
@@ -180,20 +98,32 @@ class MonitorService extends Service {
 				),
 			],
 			where: {
-
-			}
+				detail: {
+					[Op.regexp]: 'resourceError'
+				},
+				type: 'error',
+				created_at: {
+					[Op.between]: [startTime, endTime],
+				},
+			},
 		})
 
-	}
-
-	// 页面访问
-	// 数据格式：时间、访问数(pv)、用户数(uv)
-	async getPageAccessData(startTime, endTime, dim) {
-		let timeDim = this.formatDim(dim);
-
-		return await this.ctx.model.Log.findAll({
+		const whiteScreenLog = await this.ctx.model.Log.findAll({
 			attributes: [
-				// [sequelize.fn('COUNT', sequelize.col('type')), 'pv'],
+				[sequelize.literal("count(case when type='whiteScreen' then 1 end)"), 'num'],
+				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
+			],
+			where: {
+				type: 'whiteScreen',
+				created_at: {
+					[Op.between]: [startTime, endTime],
+				},
+			},
+		})
+
+		const pageAccessLog = await this.ctx.model.Log.findAll({
+			attributes: [
+				[sequelize.fn('COUNT', sequelize.col('uuid')), 'uv'],
 				[sequelize.literal("count(case when type='pv' then 1 end)"), 'pv'],
 				[sequelize.fn('DATE_FORMAT', sequelize.col('created_at'), timeDim), 'time'],
 			],
@@ -205,13 +135,42 @@ class MonitorService extends Service {
 				),
 			],
 			where: {
-				// type: 'pv',
+				type: 'pv',
 				created_at: {
-					[Op.between]: [startTime, endTime]
-				}
-			}
+					[Op.between]: [startTime, endTime],
+				},
+			},
 		})
 
+		switch (queryType) {
+			case 'JSexc':
+				return JSExcLog
+			case 'APISuccessRate':
+				return apiSuccessLog
+			case 'PagePfm':
+				return pagePfmLog
+			case 'ResourceExc':
+				return resourceExcLog
+			case 'WhiteScreen':
+				return whiteScreenLog
+			case 'PageAccess':
+				return pageAccessLog
+			default:
+				return null
+		}
+	}
+
+	//其余数据接口
+	//无请求参数
+	async getAllLog() {
+		return await this.ctx.model.Log.findAll({
+			attributes: [
+				'uuid', 'type', 'city',
+				'browser', 'os', 'detail',
+				['created_at', 'time']
+			],
+			group: 'created_at'
+		})
 	}
 }
 

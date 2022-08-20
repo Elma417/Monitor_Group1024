@@ -12,21 +12,13 @@ module.exports = app => {
 	 */
 	// 上传日志
 	router.all('/logstore/track', controller.logstore.track)
-	router.post('/logstore/uploadMap', controller.logstore.uploadMap)
 
 	/*
 	 * 中台可视化接口
 	 */
-	// JS异常：
-	router.get('/api/JSexcData', controller.monitorApi.jsExcData)
-	// API成功率：
-	router.get('/api/APISuccessRateData', controller.monitorApi.apiSuccessRateData)
-	// 页面性能：
-	router.get('/api/pagepfmData', controller.monitorApi.pagepfmData)
-	// 资源异常：
-	router.get('/api/ResourceExcData', controller.monitorApi.ResourceExcData)
-	// 白屏异常：
-	router.get('/api/WhiteScreenData', controller.monitorApi.WhiteScreenData)
-	// 页面访问：
-	router.get('/api/PageAccessData', controller.monitorApi.PageAccessData)
+
+	// 总览数据：
+	router.get('/api/getAllData', controller.monitorApi.allData)
+	// 图表数据
+	router.get('/api/getChartData', controller.monitorApi.chartData)
 }
