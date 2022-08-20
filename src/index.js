@@ -1,4 +1,4 @@
-import Monitor, { sendPv } from "../../sdktest/index";
+import Monitor, { sendPv } from "next-mini-monitor";
 import $ from "jquery";
 import "./index.css";
 
