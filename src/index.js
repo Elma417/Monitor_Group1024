@@ -1,9 +1,9 @@
-import Monitor, { sendPv } from "next-mini-monitor";
+import Monitor, { sendPv } from "../../sdktest/index";
 import $ from "jquery";
 import "./index.css";
 
 Monitor({
-	path: "http://182.61.146.211:7001/logstore/track",
+	path: "http://localhost:7001/logstore/track",
 	onError: true,
 	onPaint: true,
 	onPV: true,
@@ -14,10 +14,30 @@ Monitor({
 /*
  * api请求
  */
-var xhr = new XMLHttpRequest();
-xhr.open("get", "http://182.61.146.211:7001/");
-xhr.send(null);
-console.log(xhr.responseText);
+setInterval(function () {
+	var xhr = new XMLHttpRequest();
+	xhr.open("get", "http://localhost:7001/");
+	xhr.send(null);
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState == 4 && xhr.status == 200) {
+			console.log(xhr.responseText);
+		} else {
+			console.log(xhr.responseText);
+		}
+	};
+}, 10000);
+setInterval(function () {
+	var xhr = new XMLHttpRequest();
+	xhr.open("get", "http://localhost:7001/error");
+	xhr.send(null);
+	xhr.onreadystatechange = function () {
+		if (xhr.readyState == 4 && xhr.status == 200) {
+			console.log(xhr.responseText);
+		} else {
+			console.log(xhr.responseText);
+		}
+	};
+}, 20000);
 
 $(function () {
 	let y, y1;

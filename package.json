@@ -22,6 +22,6 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
-    "next-mini-monitor": "^1.0.3"
+    "next-mini-monitor": "^1.0.11"
   }
 }
