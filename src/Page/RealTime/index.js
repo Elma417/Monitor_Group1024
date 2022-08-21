@@ -7,6 +7,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactEcharts from "echarts-for-react";
+import { request, apiUrl, filterRealTime} from "../../utils/api/request";
 
 //实时大盘
 function RealTime() {
@@ -16,29 +17,34 @@ function RealTime() {
   const [whiteScreenNum, setWhiteScreenNum] = useState(0);
   const [resourceExcNum, setResourceExcNum] = useState(0);
   const [pageAccessNum, setPageAccessNum] = useState(0);
+
   let date = new Date();
+  const time = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
 
   useEffect(() => {
     //request
-    const fetchStatistics = async () => {
-      const res = await axios.get("http://localhost:3100/statistics", {
-        params: {
-          time: `${date.getFullYear()}-${
-            date.getMonth() + 1
-          }-${date.getDate()}`,
-        },
-      });
-      console.log(
-        `log:${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
-      );
-      setJsNum(res.data.jsNum);
-      setApiRate(res.data.apiRate);
-      setPagePfmTime(res.data.pagePfmTime);
-      setWhiteScreenNum(res.data.whiteScreenNum);
-      setResourceExcNum(res.data.resourceExcNum);
-      setPageAccessNum(res.data.pageAccessNum);
+
+    request(apiUrl.getAll).then(
+        (res) => {
+
+          let body = res.body;
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+
+          const data = filterRealTime(body);
+
+          console.log(data)
+          setJsNum(data.jsNum);
+          setApiRate(data.apiRate);
+          setPagePfmTime(data.pagePfmTime);
+          setWhiteScreenNum(data.whiteScreenNum);
+          setResourceExcNum(data.resourceExcNum);
+          setPageAccessNum(data.pageAccessNum);
+        }
+    )
+
       //终端打印查看
-      console.log("data:" + JSON.stringify(res.data));
       // {
       //   jsNum:1244,           //今日JS异常总数
       //   apiRate:0.96,         //今日API平均成功率
@@ -47,16 +53,16 @@ function RealTime() {
       //   resourceExcNum:14531, //今日资源异常总数
       //   pageAccessNum:1238,   //今日页面访问数（pv）
       // }
-    };
-    const timer = window.setInterval(() => {
-      fetchStatistics();
-    }, 10000);
 
-    //delete timer
-    return () => {
-      clearInterval(timer);
-    };
-  }, []);
+    // const timer = window.setInterval(() => {
+    //   fetchStatistics();
+    // }, 10000);
+    //
+    // //delete timer
+    // return () => {
+    //   clearInterval(timer);
+    // };
+  }, [time]);
 
   return (
     <div
@@ -70,7 +76,7 @@ function RealTime() {
       >
         {/* JS异常 */}
         <div
-          className="h-full w-1/3 bg-gray-50 rounded flex flex-col 
+          className="h-full w-1/3 bg-gray-50 rounded flex flex-col
         justify-start items-start p-2"
         >
           <div className="h-8 w-full flex items-center px-3 text-gray-600 bg-green-30">
@@ -90,7 +96,7 @@ function RealTime() {
 
         {/* API成功率 */}
         <div
-          className="h-full w-1/3 bg-gray-50 rounded flex flex-col 
+          className="h-full w-1/3 bg-gray-50 rounded flex flex-col
         justify-start items-start p-2"
         >
           <div className="h-8 w-full flex items-center px-3 text-gray-600 bg-green-30">
@@ -110,7 +116,7 @@ function RealTime() {
 
         {/* 页面性能 */}
         <div
-          className="h-full w-1/3 bg-gray-50 rounded flex flex-col 
+          className="h-full w-1/3 bg-gray-50 rounded flex flex-col
         justify-start items-start p-2"
         >
           <div className="h-8 w-full flex items-center px-3 text-gray-600 bg-green-30">
@@ -136,7 +142,7 @@ function RealTime() {
       >
         {/* 白屏异常 */}
         <div
-          className="h-full w-1/3 bg-gray-50 rounded flex flex-col 
+          className="h-full w-1/3 bg-gray-50 rounded flex flex-col
         justify-start items-start p-2"
         >
           <div className="h-8 w-full flex items-center px-3 text-gray-600 bg-green-30">
@@ -156,7 +162,7 @@ function RealTime() {
 
         {/* 资源异常 */}
         <div
-          className="h-full w-1/3 bg-gray-50 rounded flex flex-col 
+          className="h-full w-1/3 bg-gray-50 rounded flex flex-col
         justify-start items-start p-2"
         >
           <div className="h-8 w-full flex items-center px-3 text-gray-600 bg-green-30">
@@ -176,7 +182,7 @@ function RealTime() {
 
         {/* 页面访问 */}
         <div
-          className="h-full w-1/3 bg-gray-50 rounded flex flex-col 
+          className="h-full w-1/3 bg-gray-50 rounded flex flex-col
         justify-start items-start p-2"
         >
           <div className="h-8 w-full flex items-center px-3 text-gray-600 bg-green-30">

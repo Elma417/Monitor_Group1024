@@ -3,6 +3,7 @@ import APISuccessTrend from "../../Component/APIsuccessCPN/APISuccessTrend";
 import Details from "../../Component/APIsuccessCPN/Details";
 import RingChar from "../../Component/RingChar";
 import MapChar from "../../Component/MapChar";
+import { request, apiUrl } from "../../utils/api/request";
 
 function APISuccessRate(props) {
   const [today, setToday] = useState("");
@@ -11,6 +12,14 @@ function APISuccessRate(props) {
   const [reqCon, setReqCon] = useState(0); // 平均请求耗时
 
   useEffect(() => {
+    request(apiUrl.getAll).then(
+        (res) => {
+          let body = res.body;
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+        }
+    )
     setToday(props.today);
   }, [props.today]);
 
@@ -18,7 +27,7 @@ function APISuccessRate(props) {
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
       {/* 滚动窗口框（含滚动条） */}
       <div
-        className="flex-grow w-full flex flex-col justify-start items-center  
+        className="flex-grow w-full flex flex-col justify-start items-center
       gap-1 overflow-y-scroll"
       >
         {/* 可变长内容 */}

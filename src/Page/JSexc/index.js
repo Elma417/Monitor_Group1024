@@ -3,7 +3,7 @@ import JSexcTrend from "../../Component/JSescCPN/JSexcTrend";
 import Details from "../../Component/JSescCPN/Details";
 import RingChar from "../../Component/RingChar";
 import MapChar from "../../Component/MapChar";
-import axios from "axios";
+import {request, apiUrl, filterJsChart, filterJsExc} from "../../utils/api/request";
 
 // props : today
 function JSexc(props) {
@@ -11,34 +11,57 @@ function JSexc(props) {
   const [JSexcNum, setJSexcNum] = useState(0); //JS异常次数
   const [PvNum, setPvNum] = useState(0); // 页面访问量（pv）
 
+  let jsChartData = {}, jsExcData = [];
+
   useEffect(() => {
     setToday(props.today);
-    const fetch = async () => {
-      const res = await axios.get("http://localhost:3100/getJSexcTotal", {
-        params: {
-          Time: props.today,
-        },
-      });
-      setJSexcNum(res.data.JSexcNum);
-      setPvNum(res.data.PvNum);
-      //终端打印查看
-      console.log("getJSexcTotal :" + JSON.stringify(res.data));
-    };
-    //一分钟发送一次
-    const timer = window.setInterval(() => {
-      fetch();
-    }, 60000);
+    // 请求图表数据
+    request(apiUrl.getChart, {
+      queryType: props.queryType, // 参数格式string，值参考文档
+      startTime: props.startTime, // 参数格式string "2022-08-13 12:20:22"
+      endTime: props.endTime, // 参数格式string "2022-08-19 12:20:22"
+      dim: props.dim // 参数格式string 值参考文档
+    }).then(
+        (res) => {
+          let body = res.body;
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          jsChartData = filterJsChart(body)
+        }
+    )
 
-    return () => {
-      clearInterval(timer);
-    };
+    // 请求js异常数据
+    request(apiUrl.getAll).then(
+        (res) => {
+          let body = res.body;
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          jsExcData = filterJsExc(body)
+        }
+    )
+
+      // setJSexcNum(res.data.JSexcNum);
+      // setPvNum(res.data.PvNum);
+      //终端打印查看
+      // console.log("getJSexcTotal :" + JSON.stringify(res.data));
+
+    //一分钟发送一次
+    // const timer = window.setInterval(() => {
+    //   fetch();
+    // }, 60000);
+    //
+    // return () => {
+    //   clearInterval(timer);
+    // };
   }, [props.today]);
 
   return (
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
       {/* 滚动窗口框（含滚动条） */}
       <div
-        className="flex-grow w-full flex flex-col justify-start items-center  
+        className="flex-grow w-full flex flex-col justify-start items-center
       gap-1 overflow-y-scroll"
       >
         {/* 可变长内容 */}

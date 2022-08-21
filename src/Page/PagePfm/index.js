@@ -3,6 +3,7 @@ import PagePfmTrend from "../../Component/PagePfmCPN/PagePfmTrend";
 import Details from "../../Component/PagePfmCPN/Details";
 import RingChar from "../../Component/RingChar";
 import MapChar from "../../Component/MapChar";
+import {request, apiUrl, filterPagePfmChart, filterPagePfmExc} from "../../utils/api/request";
 
 function PagePfm(props) {
   const [today, setToday] = useState("");
@@ -10,7 +11,38 @@ function PagePfm(props) {
   const [pfContentCon, setPfContentCon] = useState(0); // 首屏内容绘制时间
   const [pfDoneCon, setPfDoneCon] = useState(0); // 页面解析完成的时间
 
+  let pagePfmChart = {}, pagePfmExc = [], pfmTotal = {};
+
   useEffect(() => {
+    // 请求页面性能数据
+    request(apiUrl.getChart,{
+      queryType: props.queryType, // 参数格式string，值参考文档
+      startTime: props.startTime, // 参数格式string "2022-08-13 12:20:22"
+      endTime: props.endTime, // 参数格式string "2022-08-19 12:20:22"
+      dim: props.dim // 参数格式string 值参考文档
+    }).then(
+        (res) => {
+          let body = res.body
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          pagePfmChart = filterPagePfmChart(body)
+        }
+    )
+
+    // 请求页面性能其余数据
+    request(apiUrl.getAll).then(
+        (res) => {
+          let body = res.body
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          const { pagePfm, PFMTotal } = filterPagePfmExc(body)
+          pagePfmExc = pagePfm
+          pfmTotal = PFMTotal
+        }
+    )
+
     setToday(props.today);
   }, [props.today]);
 
@@ -18,7 +50,7 @@ function PagePfm(props) {
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
       {/* 滚动窗口框（含滚动条） */}
       <div
-        className="flex-grow w-full flex flex-col justify-start items-center  
+        className="flex-grow w-full flex flex-col justify-start items-center
       gap-1 overflow-y-scroll"
       >
         {/* 可变长内容 */}
