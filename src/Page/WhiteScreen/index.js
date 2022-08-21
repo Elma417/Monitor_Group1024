@@ -3,7 +3,7 @@ import WhiteScreenTrend from "../../Component/WhiteScreenCPN/WhiteScreenTrend";
 import Details from "../../Component/WhiteScreenCPN/Details";
 import RingChar from "../../Component/RingChar";
 import MapChar from "../../Component/MapChar";
-
+import { request , apiUrl,WhiteScreenData } from "../../utils/api/request";
 function WhiteScreen(props) {
   const [today, setToday] = useState("");
   const [WsNum, setWsNum] = useState(0); //白屏异常总数
@@ -11,6 +11,11 @@ function WhiteScreen(props) {
   const [UserNum, setUserNum] = useState(0); // 用户数
 
   useEffect(() => {
+    request(apiUrl.getAll).then(
+      (res)=>{
+        WhiteScreenData(res.body)
+      }
+    )
     setToday(props.today);
   }, [props.today]);
 

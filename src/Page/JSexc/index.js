@@ -10,7 +10,6 @@ function JSexc(props) {
   const [today, setToday] = useState("");
   const [JSexcNum, setJSexcNum] = useState(0); //JS异常次数
   const [PvNum, setPvNum] = useState(0); // 页面访问量（pv）
-
   let jsChartData = {}, jsExcData = [];
 
   useEffect(() => {

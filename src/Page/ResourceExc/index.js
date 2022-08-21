@@ -3,14 +3,52 @@ import ResourceExcTrend from "../../Component/ResourceExcCPN/ResourceExcTrend";
 import Details from "../../Component/ResourceExcCPN/Details";
 import RingChar from "../../Component/RingChar";
 import MapChar from "../../Component/MapChar";
+import { request, apiUrl, ResourceChart,ResourceResult} from "../../utils/api/request";
+
 
 function ResourceExc(props) {
   const [today, setToday] = useState("");
   const [ExcNum, setExcNum] = useState(0); //失败资源数
   const [AccessNum, setAccessNum] = useState(0); // 访问数
   const [UserNum, setUserNum] = useState(0); // 用户数
-
+  let resourceData = [],
+      resourceChartData = {};
   useEffect(() => {
+    // 请求图表数据
+    // resourceChartData 格式
+    // {
+    //   ResourceExc: [],
+    //   pv: [],
+    //   uv: [],
+    //  time: []
+    // }
+
+
+    request(apiUrl.getChart, {
+      queryType: props.queryType, // 参数格式string，值参考文档
+      startTime: props.startTime, // 参数格式string "2022-08-13 12:20:22"
+      endTime: props.endTime, // 参数格式string "2022-08-19 12:20:22"
+      dim: props.dim // 参数格式string 值参考文档
+    }).then(
+        (res) => {
+          resourceChartData = ResourceChart(res.body);
+        }
+    )
+
+
+
+    // resourceData 格式
+    // resourceData = [{
+    //   pv: Number,
+    //   time: String,
+    //   uuid: String,
+    //   detail: String,
+    // }];
+    request(apiUrl.getAll).then(res =>{
+        let resourceData = Array.from(ResourceResult(res.body));
+    })
+    
+    // setExcNum(resourceData.length);
     setToday(props.today);
   }, [props.today]);
 
