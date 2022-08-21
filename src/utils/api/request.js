@@ -23,57 +23,43 @@ export const request = function (url,params = {}) {
     })
 }
 
+// 客户端,操作系统，城市占比统计
+export function statistics(dataList, type) {
+    let sumCount = 0, list = [], count = 0,
+        init = dataList[0][`${type}`];
 
-request(apiUrl.getAll).then(
-    (res) => {
-        let body = res.body
-        for(let key of body) {
-            key.detail = JSON.parse(body.detail)
-        }
-        //页面访问
-        let uuid = body[0].uuid, pv = 0, userNum = 0;
-        const pageAccess = body.filter((el) => {
-            if(el.type === 'pv') {
-                pv++
-                if(el.uuid !== uuid) {
-                    userNum++
-                    uuid = el.uuid
-                }
-                return el;
+    for(let key of dataList) {
+        if(!key[`${type}`] || key[`${type}`] === null) break
+
+        sumCount++
+        if(key[`${type}`] === init) {
+            count++
+        } else {
+            const data = {
+                rate: count,
+                name: key[`${type}`]
             }
-        })
 
-        //页面性能
-
-        //资源异常
-        // let pv = 0, uuid = body[0].uuid, userNum = 0,
-        //     excNum = 0;
-        // const resourceExc = body.filter((el) => {
-        //     if(el.detail.errorType === 'resourceError' && el.type === 'error') {
-        //         pv++
-        //         excNum++
-        //         if(el.uuid !== uuid) {
-        //             userNum++
-        //             uuid = el.uuid
-        //         }
-        //         return el;
-        //     }
-        // })
-
-        //白屏异常
-        // let wsNum = 0, uuid = body[0].uuid, userNum = 0,
-        // const wsExc = body.filter((el) => {
-        //     if(el.type === 'whiteScreen') {
-        //         wsNum++
-        //         if(el.uuid !== uuid) {
-        //             userNum++
-        //             uuid = el.uuid
-        //         }
-        //         return el
-        //     }
-        // })
+            list.push(data)
+            count = 0
+        }
     }
-)
+
+    if(count === dataList.length) {
+        const data = {
+            rate: count,
+            name: init
+        }
+
+        list.push(data)
+    }
+
+    for (let key of list) {
+        key.rate = key.rate/sumCount
+    }
+
+    return list
+}
 
 // 实时大盘数据过滤
 export function filterRealTime(response, time = "2022-8-19") {
@@ -114,7 +100,103 @@ export function filterRealTime(response, time = "2022-8-19") {
     }
 }
 
-//
+// 页面访问图表数据过滤
+export function filterPageAccessChart(response) {
+    let timeList = [], pvList = [], uvList = [];
+    for (let key of response) {
+        timeList.push(key.time)
+        pvList.push(key.pv)
+        uvList.push(key.uv)
+    }
+
+    return {
+        time: timeList,
+        pv: pvList,
+        uv: uvList
+    }
+}
+
+
+// 页面访问数据过滤
+export function filterPageAccessData(response) {
+    let url = 'http://182.61.146.211:5173/',
+        initUuid = response[0].uuid, uvCount = 0;
+
+    const pageAccess = response.filter((el) => {
+        if(el.type === 'pv') {
+            if(initUuid !== el.uuid) {
+                uvCount++
+                initUuid = el.uuid
+            }
+            return el
+        }
+    })
+
+    const accessContent = {
+        pv: pageAccess.length,
+        uv: uvCount,
+        url: url
+    }
+
+    return { accessContent, pageAccess }
+}
+
+// API图表数据过滤
+export function filterApiChart(response) {
+    let initTime = response[0].time,
+        reqNum = 0, successCount = 0,
+        timeList = [], reqNumList = [], successRateList = [];
+
+    for(let key of response) {
+        if(key.time === initTime) {
+            reqNum++
+            if(key.detail.status === '200') {
+                successCount++
+            }
+        } else {
+            timeList.push(initTime)
+            reqNumList.push(reqNum)
+            successRateList.push(Math.floor(successCount/reqNum))
+
+            initTime = key.time
+            reqNum = 0
+            successCount = 0
+        }
+    }
+
+    return {
+        time: timeList,
+        reqNum: reqNumList,
+        successRate: successRateList
+    }
+}
+
+// API其余数据过滤
+export function filterApiExc(response) {
+    let url = 'http://182.61.146.211:5173/';
+    let consumeCount = 0, APIreqNum = 0, ReqCon = 0, successCount = 0;
+
+    const apiExc = response.filter((el) => {
+        if(el.type === 'xhr' || el.type === 'fetch') {
+            APIreqNum++
+            consumeCount += el.detail.duration
+            if(el.detail.status == 200) {
+                successCount++
+            }
+            el.url = url
+            delete el.uuid
+            return el
+        }
+    })
+
+    const apiTotal = {
+        APIreqNum: APIreqNum,
+        successRate: successCount/APIreqNum,
+        ReqCon: Math.floor(consumeCount/APIreqNum)
+    }
+
+    return { apiTotal, apiExc }
+}
 
 // js异常图表数据过滤
 export function filterJsChart(response) {
@@ -134,7 +216,7 @@ export function filterJsChart(response) {
 }
 
 // js异常数据过滤
-export function filterJsExc(response, time = '2022-8-19') {
+export function filterJsExc(response, time = '2022-8-20') {
     let JSexcNum = 0, num = 0;
     const jsExc = response.filter((el) => {
         if(el.type === 'error' && el.detail.errorType === 'jsError') {
@@ -145,6 +227,7 @@ export function filterJsExc(response, time = '2022-8-19') {
                 el.num = num
                 num = 0
             }
+            return el
         }
     })
 
@@ -217,17 +300,3 @@ export function filterPagePfmExc(response) {
     return { pagePfm, PFMTotal }
 }
 
-// 资源异常图表数据过滤
-// export function filterResourceChart(response) {
-//     let initTime = response[0].time,
-//         pvCount = 0, uvCount = 0, uuid = '',
-//         timeList = [], resourceList = [], pvList = [], uvList = [];
-//     for(let key of response) {
-//         if(key.time === initTime) {
-//             uuid = key.uuid
-//             uvCount++
-//             pvCount += key.pv
-//         }
-//     }
-//
-// }

@@ -11,25 +11,10 @@ function JSexc(props) {
   const [JSexcNum, setJSexcNum] = useState(0); //JS异常次数
   const [PvNum, setPvNum] = useState(0); // 页面访问量（pv）
 
-  let jsChartData = {}, jsExcData = [];
+  let jsExcData = [];
 
   useEffect(() => {
     setToday(props.today);
-    // 请求图表数据
-    request(apiUrl.getChart, {
-      queryType: props.queryType, // 参数格式string，值参考文档
-      startTime: props.startTime, // 参数格式string "2022-08-13 12:20:22"
-      endTime: props.endTime, // 参数格式string "2022-08-19 12:20:22"
-      dim: props.dim // 参数格式string 值参考文档
-    }).then(
-        (res) => {
-          let body = res.body;
-          for (let key of body) {
-            key.detail = JSON.parse(key.detail)
-          }
-          jsChartData = filterJsChart(body)
-        }
-    )
 
     // 请求js异常数据
     request(apiUrl.getAll).then(
@@ -39,6 +24,10 @@ function JSexc(props) {
             key.detail = JSON.parse(key.detail)
           }
           jsExcData = filterJsExc(body)
+
+
+          console.log('here');
+          console.log('data:',jsExcData);
         }
     )
 

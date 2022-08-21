@@ -11,25 +11,9 @@ function PagePfm(props) {
   const [pfContentCon, setPfContentCon] = useState(0); // 首屏内容绘制时间
   const [pfDoneCon, setPfDoneCon] = useState(0); // 页面解析完成的时间
 
-  let pagePfmChart = {}, pagePfmExc = [], pfmTotal = {};
+  let pagePfmExc = [], pfmTotal = {};
 
   useEffect(() => {
-    // 请求页面性能数据
-    request(apiUrl.getChart,{
-      queryType: props.queryType, // 参数格式string，值参考文档
-      startTime: props.startTime, // 参数格式string "2022-08-13 12:20:22"
-      endTime: props.endTime, // 参数格式string "2022-08-19 12:20:22"
-      dim: props.dim // 参数格式string 值参考文档
-    }).then(
-        (res) => {
-          let body = res.body
-          for (let key of body) {
-            key.detail = JSON.parse(key.detail)
-          }
-          pagePfmChart = filterPagePfmChart(body)
-        }
-    )
-
     // 请求页面性能其余数据
     request(apiUrl.getAll).then(
         (res) => {

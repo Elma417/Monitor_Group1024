@@ -1,18 +1,39 @@
 import React, { useState, useEffect } from "react";
 import ReactEcharts from "echarts-for-react";
+import {apiUrl, filterJsChart, request} from "../../../utils/api/request";
 
 // JS异常页面趋势图组件
 // props : today(string) data(一个对象,画趋势图用)
 export default function JSexcTrend(props) {
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
+  const [queryType, setQueryType] = useState("")
   const [dim, setDim] = useState("min");
+
+  let jsChartData = {};
 
   useEffect(() => {
     if (startDate === "" && endDate === "") {
       setStartDate(props.today);
       setEndDate(props.today);
+      setQueryType(props.today);
     }
+
+    // 请求图表数据
+    request(apiUrl.getChart, {
+      queryType: queryType, // 参数格式string，值参考文档
+      startTime: startDate, // 参数格式string "2022-08-13 12:20:22"
+      endTime: endDate, // 参数格式string "2022-08-19 12:20:22"
+      dim: dim // 参数格式string 值参考文档
+    }).then(
+        (res) => {
+          let body = res.body;
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          jsChartData = filterJsChart(body)
+        }
+    )
   }, [startDate, endDate, props.today]);
 
   return (

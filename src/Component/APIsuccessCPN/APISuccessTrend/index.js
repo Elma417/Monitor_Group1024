@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
 import ReactEcharts from "echarts-for-react";
+import {request, apiUrl, filterApiChart } from "../../../utils/api/request";
 
 // API成功率趋势图组件
 // props : today(string) data(一个对象,画趋势图用)
 export default function APISuccessTrend(props) {
+  const [queryType, setQueryType] = useState("")
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [dim, setDim] = useState("min");
+
+  let apiChartData = {};
 
   useEffect(() => {
     if (!props.today) return;
@@ -20,6 +24,23 @@ export default function APISuccessTrend(props) {
     if (startDate > endDate) {
       setStartDate(endDate);
     }
+
+    //图表数据请求
+    request(apiUrl.getChart, {
+      queryType: queryType, // 参数格式string，值参考文档
+      startTime: startDate, // 参数格式string "2022-08-13 12:20:22"
+      endTime: endDate, // 参数格式string "2022-08-19 12:20:22"
+      dim: dim // 参数格式string 值参考文档
+    }).then(
+        (res) => {
+          let body = res.body;
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          apiChartData = filterApiChart(body)
+        }
+    )
+
   }, [startDate, endDate, props.today]);
 
   return (

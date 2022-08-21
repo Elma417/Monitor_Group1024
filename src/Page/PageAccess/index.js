@@ -3,11 +3,28 @@ import PageAccessTrend from "../../Component/PageAccessCPN/PageAccessTrend";
 import Details from "../../Component/PageAccessCPN/Details";
 import RingChar from "../../Component/RingChar";
 import MapChar from "../../Component/MapChar";
+import {apiUrl, filterPageAccessData, request, statistics} from "../../utils/api/request";
 
 function PageAccess(props) {
   const [today, setToday] = useState("");
 
+  let pageAccessData = [], accessContentData = {};
+
   useEffect(() => {
+    request(apiUrl.getAll).then(
+        (res) => {
+          let body = res.body
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          const { accessContent, pageAccess } = filterPageAccessData(body)
+          pageAccessData = pageAccess
+          accessContentData = accessContent
+
+          console.log(statistics(pageAccess, 'city'))
+        }
+    )
+
     setToday(props.today);
   }, [props.today]);
 
@@ -15,7 +32,7 @@ function PageAccess(props) {
     <div className="h-full w-full flex flex-col justify-start items-center bg-gray-200">
       {/* 滚动窗口框（含滚动条） */}
       <div
-        className="flex-grow w-full flex flex-col justify-start items-center  
+        className="flex-grow w-full flex flex-col justify-start items-center
       gap-1 overflow-y-scroll"
       >
         {/* 可变长内容 */}

@@ -1,20 +1,40 @@
 import React, { useState, useEffect } from "react";
 import ReactEcharts from "echarts-for-react";
+import {apiUrl, filterPagePfmChart, request} from "../../../utils/api/request";
 
 // import axios from "axios";
 
 // 页面性能趋势图组件
 // props : today(string) data(一个对象,画趋势图用)
 export default function PagePfmTrend(props) {
+  const [queryType, setQueryType] = useState("")
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   const [dim, setDim] = useState("min");
 
+  let pagePfmChart = {};
+
   useEffect(() => {
     if (startDate === "" && endDate === "") {
+      setQueryType(props.today);
       setStartDate(props.today);
       setEndDate(props.today);
     }
+
+    request(apiUrl.getChart,{
+      queryType: queryType, // 参数格式string，值参考文档
+      startTime: startDate, // 参数格式string "2022-08-13 12:20:22"
+      endTime: endDate, // 参数格式string "2022-08-19 12:20:22"
+      dim: dim // 参数格式string 值参考文档
+    }).then(
+        (res) => {
+          let body = res.body
+          for (let key of body) {
+            key.detail = JSON.parse(key.detail)
+          }
+          pagePfmChart = filterPagePfmChart(body)
+        }
+    )
   }, [startDate, endDate, props.today]);
 
   return (

@@ -3,13 +3,15 @@ import APISuccessTrend from "../../Component/APIsuccessCPN/APISuccessTrend";
 import Details from "../../Component/APIsuccessCPN/Details";
 import RingChar from "../../Component/RingChar";
 import MapChar from "../../Component/MapChar";
-import { request, apiUrl } from "../../utils/api/request";
+import { request, apiUrl, filterApiExc } from "../../utils/api/request";
 
 function APISuccessRate(props) {
   const [today, setToday] = useState("");
   const [APIreqNum, setAPIreqNum] = useState(0); //所有url请求总次数
   const [successRate, setSuccessRate] = useState(0); // 平均成功率
   const [reqCon, setReqCon] = useState(0); // 平均请求耗时
+
+  let APITotal = {}, apiExcData = [];
 
   useEffect(() => {
     request(apiUrl.getAll).then(
@@ -18,6 +20,10 @@ function APISuccessRate(props) {
           for (let key of body) {
             key.detail = JSON.parse(key.detail)
           }
+
+          const { apiTotal, apiExc } = filterApiExc(body)
+          APITotal = apiTotal
+          apiExcData = apiExc
         }
     )
     setToday(props.today);
