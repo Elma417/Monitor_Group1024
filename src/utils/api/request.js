@@ -300,3 +300,70 @@ export function filterPagePfmExc(response) {
     return { pagePfm, PFMTotal }
 }
 
+
+export function ResourceChart(response) {
+    let ResourceExcList = [],
+      pvlist = [],
+      uvlist = [],
+      timelist = [];
+  
+    let set = new Set();
+    response
+      .filter((obj) => obj.type === "error")
+      .forEach((obj) => {
+        let detail = JSON.parse(obj.detail);
+        if (detail.errorType === "resourceError") {
+          ResourceExcList.push(detail);
+          pvlist.push(1);
+          if (!set.has(obj.uuid)) {
+            set.add(obj.uuid);
+            uvlist.push(1);
+          } else {
+            uvlist.push(0);
+          }
+          timelist.push(obj.time);
+        }
+      });
+  
+    return({
+      ResourceExc: ResourceExcList,
+      pv: pvlist,
+      uv: uvlist,
+      time: timelist,
+    });
+  }
+  
+  //
+  export function ResourceResult(response) {
+    let resourceError = [],
+      pvCur = 0;
+    response
+      .filter((obj) => obj.type === "error")
+      .forEach((obj) => {
+        let detail = JSON.parse(obj.detail);
+        if (detail.errorType === "resourceError") {
+          pvCur++;
+          let _obj = {
+            pv: pvCur,
+            time: obj.time,
+            uuid: obj.uuid,
+            detail: obj.detail,
+          };
+          resourceError.push(_obj);
+        }
+        
+      });
+    return { resourceError };
+  }
+  
+  //WhiteScreen
+  export function WhiteScreenData(response) {
+    let result = {
+      whiteNum: 0,
+      detail: [],
+      time: "",
+    };
+  
+    console.log(result);
+  }
+  
