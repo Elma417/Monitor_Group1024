@@ -1,9 +1,9 @@
-import Monitor, { sendPv } from "../../Monitor_Group1024/index";
+import Monitor, { sendPv } from "next-mini-monitor";
 import $ from "jquery";
 import "./index.css";
 
 Monitor({
-	path: "http://localhost:7001/logstore/track",
+	path: "http://182.61.146.211:7001/logstore/track",
 	onError: true,
 	onPaint: true,
 	onPV: true,
