@@ -91,7 +91,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -104,8 +104,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -154,14 +154,14 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\app\\public",
+      "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\app\\public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\app\\view",
+      "root": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\app\\view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -205,6 +205,7 @@
         "geoip-lite": "^1.4.5",
         "moment": "^2.29.4",
         "mysql2": "^2.3.3",
+        "source-map": "^0.7.4",
         "ua-parser-js": "^1.0.2"
       },
       "devDependencies": {
@@ -243,9 +244,9 @@
       "author": "",
       "license": "MIT"
     },
-    "baseDir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024",
+    "baseDir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)",
     "HOME": "C:\\Users\\pinus",
-    "rundir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\run",
+    "rundir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -289,7 +290,7 @@
       }
     },
     "logger": {
-      "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\logs\\Monitor_Group1024",
+      "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\logs\\Monitor_Group1024",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -368,8 +369,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-onerror",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-onerror",
       "version": "2.1.0"
     },
     "session": {
@@ -379,8 +380,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-session",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-session",
       "version": "3.3.0"
     },
     "i18n": {
@@ -390,8 +391,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-i18n",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -401,8 +402,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-watcher",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-watcher",
       "version": "3.1.1"
     },
     "multipart": {
@@ -414,8 +415,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart",
       "version": "2.13.1"
     },
     "security": {
@@ -427,8 +428,8 @@
         "session"
       ],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security",
       "version": "2.11.0"
     },
     "development": {
@@ -442,8 +443,8 @@
       "env": [
         "local"
       ],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-development",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-development",
       "version": "2.7.0"
     },
     "logrotator": {
@@ -455,8 +456,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator",
       "version": "3.1.0"
     },
     "schedule": {
@@ -466,8 +467,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-schedule",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-schedule",
       "version": "3.6.6"
     },
     "static": {
@@ -477,8 +478,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-static",
       "version": "2.2.0"
     },
     "jsonp": {
@@ -490,8 +491,8 @@
         "security"
       ],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-jsonp",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "view": {
@@ -501,8 +502,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-view",
       "version": "2.1.3"
     },
     "sequelize": {
@@ -512,8 +513,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-sequelize",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-sequelize",
       "version": "6.0.0"
     },
     "cors": {
@@ -523,8 +524,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-cors",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-cors",
       "version": "2.2.3"
     },
     "validate": {
@@ -534,14 +535,14 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\plugin.js",
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-validate",
+      "from": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\plugin.js",
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-validate",
       "version": "2.0.2"
     }
   },
   "appInfo": {
     "name": "Monitor_Group1024",
-    "baseDir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024",
+    "baseDir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)",
     "env": "local",
     "HOME": "C:\\Users\\pinus",
     "pkg": {
@@ -561,6 +562,7 @@
         "geoip-lite": "^1.4.5",
         "moment": "^2.29.4",
         "mysql2": "^2.3.3",
+        "source-map": "^0.7.4",
         "ua-parser-js": "^1.0.2"
       },
       "devDependencies": {
@@ -599,6 +601,6 @@
       "author": "",
       "license": "MIT"
     },
-    "root": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024"
+    "root": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)"
   }
 }

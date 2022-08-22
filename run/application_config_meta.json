@@ -1,326 +1,326 @@
 {
-  "keys": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-  "middleware": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
+  "keys": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+  "middleware": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
   "sequelize": {
-    "dialect": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-    "database": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-    "host": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-    "port": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-    "username": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-    "password": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-    "timezone": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js"
+    "dialect": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+    "database": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+    "host": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+    "port": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+    "username": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+    "password": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+    "timezone": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js"
   },
   "security": {
     "csrf": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-      "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "ignoreJSON": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "useSession": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "cookieName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "sessionName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "headerName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "bodyName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "queryName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "supportedRequests": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "refererWhiteList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+      "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "supportedRequests": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
-    "domainWhiteList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
-    "protocolWhiteList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-    "defaultMiddleware": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
+    "domainWhiteList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
+    "protocolWhiteList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
     "xframe": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "hsts": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.local.js",
-      "maxAge": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "includeSubdomains": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "dta": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "methodnoallow": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "noopen": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "nosniff": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "referrerPolicy": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "xssProtection": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "value": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "csp": {
-      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "policy": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     },
     "ssrf": {
-      "ipBlackList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "ipExceptionList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js",
-      "checkAddress": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+      "ipBlackList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "ipExceptionList": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
     }
   },
   "bodyParser": {
-    "enableTypes": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js",
+    "enableTypes": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js",
     "extendTypes": {
-      "text": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\config\\config.default.js"
+      "text": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\config\\config.default.js"
     },
-    "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "formLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "jsonLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "textLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "strict": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+    "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "strict": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
     "queryString": {
-      "arrayLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "depth": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "parameterLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "arrayLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "depth": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
-    "onerror": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "onerror": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
   "session": {
-    "maxAge": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-session\\config\\config.default.js",
-    "key": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-session\\config\\config.default.js",
-    "httpOnly": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-session\\config\\config.default.js",
-    "encrypt": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-session\\config\\config.default.js",
-    "logValue": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-session\\config\\config.default.js"
+    "maxAge": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-session\\config\\config.default.js",
+    "logValue": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-session\\config\\config.default.js"
   },
   "helper": {
-    "shtml": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-security\\config\\config.default.js"
+    "shtml": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-security\\config\\config.default.js"
   },
   "jsonp": {
-    "limit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "callback": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-jsonp\\config\\config.default.js",
-    "csrf": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-jsonp\\config\\config.default.js"
+    "limit": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-jsonp\\config\\config.default.js"
   },
   "onerror": {
-    "errorPageUrl": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-onerror\\config\\config.default.js",
-    "appErrorFilter": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-onerror\\config\\config.default.js",
-    "templatePath": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-onerror\\config\\config.default.js"
+    "errorPageUrl": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-onerror\\config\\config.default.js"
   },
   "i18n": {
-    "defaultLocale": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-i18n\\config\\config.default.js",
-    "dirs": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-i18n\\config\\config.default.js",
-    "queryField": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieField": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieDomain": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-i18n\\config\\config.default.js",
-    "cookieMaxAge": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-i18n\\config\\config.default.js"
+    "defaultLocale": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-i18n\\config\\config.default.js"
   },
   "watcher": {
-    "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-watcher\\config\\config.local.js",
+    "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-watcher\\config\\config.local.js",
     "eventSources": {
-      "default": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-watcher\\config\\config.default.js",
-      "development": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-watcher\\config\\config.default.js"
+      "default": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-watcher\\config\\config.default.js"
     }
   },
   "customLogger": {
     "scheduleLogger": {
-      "consoleLevel": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-schedule\\config\\config.default.js",
-      "file": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-schedule\\config\\config.default.js"
+      "consoleLevel": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-schedule\\config\\config.default.js"
     }
   },
   "schedule": {
-    "directory": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-schedule\\config\\config.default.js"
+    "directory": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-schedule\\config\\config.default.js"
   },
   "multipart": {
-    "mode": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "autoFields": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "defaultCharset": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldNameSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fieldSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fields": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "files": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "fileExtensions": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "whitelist": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "allowArrayField": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-    "tmpdir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
+    "mode": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "allowArrayField": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
     "cleanSchedule": {
-      "cron": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js",
-      "disable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-multipart\\config\\config.default.js"
+      "cron": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js",
+      "disable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-multipart\\config\\config.default.js"
     }
   },
   "development": {
-    "watchDirs": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-development\\config\\config.default.js",
-    "ignoreDirs": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-development\\config\\config.default.js",
-    "fastReady": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-development\\config\\config.default.js",
-    "reloadOnDebug": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-development\\config\\config.default.js",
-    "overrideDefault": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-development\\config\\config.default.js",
-    "overrideIgnore": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-development\\config\\config.default.js"
+    "watchDirs": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideIgnore": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-development\\config\\config.default.js"
   },
   "logrotator": {
-    "filesRotateByHour": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "hourDelimiter": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "filesRotateBySize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFileSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxFiles": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "rotateDuration": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator\\config\\config.default.js",
-    "maxDays": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-logrotator\\config\\config.default.js"
+    "filesRotateByHour": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-logrotator\\config\\config.default.js"
   },
   "static": {
-    "prefix": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static\\config\\config.default.js",
-    "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static\\config\\config.default.js",
-    "dynamic": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static\\config\\config.default.js",
-    "preload": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static\\config\\config.default.js",
-    "buffer": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static\\config\\config.default.js",
-    "maxFiles": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-static\\config\\config.default.js"
+    "prefix": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-static\\config\\config.default.js"
   },
   "view": {
-    "root": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view\\config\\config.default.js",
-    "cache": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view\\config\\config.local.js",
-    "defaultExtension": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view\\config\\config.default.js",
-    "defaultViewEngine": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view\\config\\config.default.js",
-    "mapping": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-view\\config\\config.default.js"
+    "root": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-view\\config\\config.default.js"
   },
-  "cors": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-cors\\config\\config.default.js",
-  "validate": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg-validate\\config\\config.default.js",
-  "env": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "name": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "cookies": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "proxy": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "maxIpsCount": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "maxProxyCount": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "protocolHeaders": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "ipHeaders": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "hostHeaders": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+  "cors": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-cors\\config\\config.default.js",
+  "validate": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg-validate\\config\\config.default.js",
+  "env": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "name": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
   "pkg": {
-    "name": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "version": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "description": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "private": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+    "name": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "version": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "description": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "private": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
     "egg": {
-      "declarations": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "declarations": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "dependencies": {
-      "co-body": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg-cors": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg-sequelize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg-validate": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "geoip-lite": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "moment": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "mysql2": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "source-map": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "ua-parser-js": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "co-body": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg-cors": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg-sequelize": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg-validate": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "geoip-lite": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "moment": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "mysql2": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "source-map": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "ua-parser-js": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "devDependencies": {
-      "autod": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "autod-egg": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg-bin": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg-ci": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg-mock": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "egg-scripts": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "eslint": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "eslint-config-egg": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "autod": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "autod-egg": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg-ci": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg-mock": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "egg-scripts": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "eslint": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "eslint-config-egg": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "engines": {
-      "node": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "node": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "scripts": {
-      "start": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "stop": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "dev": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "debug": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "test": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "test-local": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "cov": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "lint": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "ci": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "autod": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "start": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "stop": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "dev": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "debug": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "test": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "test-local": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "cov": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "lint": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "ci": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "autod": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "ci": {
-      "version": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "version": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "repository": {
-      "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "url": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "type": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "url": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
-    "author": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "license": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "author": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "license": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
-  "baseDir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "HOME": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "rundir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+  "baseDir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
   "dump": {
-    "ignore": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "ignore": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
   "confusedConfigurations": {
-    "bodyparser": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "notFound": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "sitefile": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "middlewares": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "httpClient": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "bodyparser": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
   "notfound": {
-    "pageUrl": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "pageUrl": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
   "siteFile": {
-    "/favicon.ico": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "cacheControl": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "/favicon.ico": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "cacheControl": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
   "logger": {
-    "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "encoding": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "env": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "level": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "consoleLevel": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "disableConsoleAfterReady": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "outputJSON": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "buffer": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "appLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "coreLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "agentLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "errorLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+    "dir": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "env": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "level": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
     "coreLogger": {
-      "consoleLevel": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.local.js"
+      "consoleLevel": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.local.js"
     },
-    "allowDebugAtProd": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "enablePerformanceTimer": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "allowDebugAtProd": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "enablePerformanceTimer": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
   "httpclient": {
-    "enableDNSCache": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheLookupInterval": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "dnsCacheMaxLength": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+    "enableDNSCache": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
     "request": {
-      "timeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "timeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "httpAgent": {
-      "keepAlive": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     },
     "httpsAgent": {
-      "keepAlive": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "freeSocketTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "maxSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "maxFreeSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "keepAlive": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "meta": {
-    "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "logging": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "enable": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "logging": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
-  "coreMiddleware": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "workerStartTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-  "serverTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
+  "coreMiddleware": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
   "cluster": {
     "listen": {
-      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "port": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-      "hostname": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+      "path": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "port": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
     }
   },
   "clusterClient": {
-    "maxWaitTime": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js",
-    "responseTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+    "maxWaitTime": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
   },
-  "onClientError": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024\\node_modules\\egg\\config\\config.default.js"
+  "onClientError": "C:\\Users\\pinus\\Desktop\\Monitor_Group1024 - 副本 (2)\\node_modules\\egg\\config\\config.default.js"
 }

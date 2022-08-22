@@ -42,11 +42,12 @@ class LogStoreController extends Controller {
 		) {
 			// 针对js错误需要使用sourceMap进行position定位
 			const rawSourceMap = JSON.parse(
-				fs.readFileSync(path.join(__dirname, `../../assert/sourceMap/${data.filename}.map`))
+				fs.readFileSync(path.join(__dirname, `../../assert/sourceMap/bundle.js.map`))
 			)
+			console.log(data.position)
+			let position = data.position.split(':').map(item => parseInt(item))
+			console.log(position)
 			SourceMapConsumer.with(rawSourceMap, null, consumer => {
-				let position = data.position.split(':').map(item => parseInt(item))
-
 				const pos = consumer.originalPositionFor({
 					line: position[0],
 					column: position[1],

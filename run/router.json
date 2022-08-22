@@ -77,8 +77,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/JSexcData",
-    "regexp": "/^\\/api\\/JSexcData(?:\\/(?=$))?$/",
+    "path": "/api/getAllData",
+    "regexp": "/^\\/api\\/getAllData(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -90,60 +90,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/APISuccessRateData",
-    "regexp": "/^\\/api\\/APISuccessRateData(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/api/pagepfmData",
-    "regexp": "/^\\/api\\/pagepfmData(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/api/ResourceExcData",
-    "regexp": "/^\\/api\\/ResourceExcData(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/api/WhiteScreenData",
-    "regexp": "/^\\/api\\/WhiteScreenData(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/api/PageAccessData",
-    "regexp": "/^\\/api\\/PageAccessData(?:\\/(?=$))?$/",
+    "path": "/api/getChartData",
+    "regexp": "/^\\/api\\/getChartData(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
