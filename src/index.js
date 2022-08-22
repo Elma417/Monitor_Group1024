@@ -25,7 +25,7 @@ setInterval(function () {
 			console.log(xhr.responseText);
 		}
 	};
-}, 10000);
+}, 60000);
 setInterval(function () {
 	var xhr = new XMLHttpRequest();
 	xhr.open("get", "http://182.61.146.211:7001/error");
@@ -37,7 +37,7 @@ setInterval(function () {
 			console.log(xhr.responseText);
 		}
 	};
-}, 20000);
+}, 100000);
 
 $(function () {
 	let y, y1;
