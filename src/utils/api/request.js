@@ -8,7 +8,7 @@ export const apiUrl = {
 }
 
 export const request = function (url,params = {}) {
-    const host = 'http://182.61.146.211:7001/api'
+    const host = 'http://159.75.110.252:7001/api'
     return new Promise((resolve,reject) => {
         axios({
             url: host + url,
@@ -358,12 +358,13 @@ export function ResourceChart(response) {
   
   //WhiteScreen
   export function WhiteScreenData(response) {
+    
     let result = {
       whiteNum: 0,
       detail: [],
       time: "",
     };
-  
-    console.log(result);
+    return result
+    // console.log(result);
   }
   

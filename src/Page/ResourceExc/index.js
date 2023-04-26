@@ -94,7 +94,7 @@ function ResourceExc(props) {
             <Details today={today}></Details>
           </div>
           {/* 环形图表区 */}
-          <div
+          {/* <div
             className="h-500 w-11/12 rounded p-2 bg-gray-50 shrink-0 mt-4 flex justify-between items-center
           divide-x-2 divide-gray-200"
           >
@@ -110,16 +110,16 @@ function ResourceExc(props) {
               </div>
               <RingChar></RingChar>
             </div>
-          </div>
+          </div> */}
           {/* 地域热力图 */}
-          <div className="h-600 w-11/12 rounded p-2 bg-gray-50 shrink-0 mt-4 flex flex-col justify-between items-center">
+          {/* <div className="h-600 w-11/12 rounded p-2 bg-gray-50 shrink-0 mt-4 flex flex-col justify-between items-center">
             <div className="h-12 w-5/6 pt-2 text-xl text-blue-600 font-bold">
               异常地域分布
             </div>
             <div className="flex-grow h-500 w-full min-h-0 ">
               <MapChar></MapChar>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
